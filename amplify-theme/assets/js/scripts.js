@@ -353,7 +353,7 @@
 	}
 
 	// When the last message is received. Typicaly the announcement time
-	showNotificationBar( new Date('August 1, 2018 11:00:00') );
+	// showNotificationBar( new Date('August 1, 2018 11:00:00') );
 
 	// Hide magnifying glass in search bar
 	// var hideSearchIcon = function() {
