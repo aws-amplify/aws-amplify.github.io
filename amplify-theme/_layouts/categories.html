@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include site-head.html %}
+	</head>
+	<body class="{{ site.amplify.color_theme }}">
+		{% include site-header.html %}
+
+		{% if page.marketing_grid%}
+		<div class="page-container">
+			<div class="section-category">
+		
+				<div class="container">
+					<div class="row">
+	
+						<div>
+							<div class="dev-guide-heading">
+								<div class="row">
+									{% for item in page.marketing_grid %}
+										<div class="col-sm-8 col-lg-8">
+											<span>
+												<div class="dev-guide-content" data-mh>
+													<p class="dev-guide__title">{{ item.title }}</p>
+													<!-- <p class="dev-guide__excerpt">{{ item.excerpt }}</p> -->
+												</div><!-- /.nav-grid__content -->
+											</span><!-- /.nav-grid__item -->
+										</div><!-- /.col -->
+									{% endfor %}
+								</div><!-- /.row -->
+								<!-- <div>
+									<a href="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/media/cli_guide"> <button class="btn install-amplify-cli" >Install Amplify CLI</button> </a>
+								</div> -->
+							</div><!-- /.nav-grid -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div><!-- /.section -->
+			{% endif %}
+
+			{% if site.category_list %}			
+				<div>
+					<div class="container">
+							<div class="row">
+								<div>
+									<div class="nav-grid nav-grid--out">
+										{% for category in site.category_list %}
+											{% if category.title contains "Setup & Installation" %}
+											{% else %}
+												<div class="section-top section-top-category" {% if category.title == 'User Interface' %}id="bottom-section"{% endif %}>
+													<div class="container">
+															<div class="header">
+																{{ category.title}}
+															</div>
+															<div class="subheader">
+																{{ category.excerpt}}
+															</div>
+															<div class="row">
+																{% for item in category.subs %}
+																	<div class="col-xs-12 col-sm-6 col-lg-4">
+																		<a href="{% if item.url_external %} {{ item.url_external }} {% endif %}{% if item.url %}{% if jekyll.environment == 'production' %}{{ site.amplify.docs_baseurl }}{% endif %}{{ item.url }}{% endif %}" class="dev-guide-item">
+																			<img src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}{{ item.icon }}" class="dev-guide-icon" /> 
+																			<div class="dev-guide-content" data-mh>
+																				<div class="dev-guide-title" >
+																					{{ item.title }} 
+																				</div>
+																				<div class="dev-guide-excerpt">{{ item.excerpt }}</div>
+																			</div><!-- /.nav-grid__content -->
+																			<div class="services-container">
+																				<div class='dev-guide-services'>
+																					{% for service in item.services %} 
+																						<i onClick="window.open('{{ service.url }}', '_blank'); return false;" >
+																							{{ service.title }}
+																						</i>
+																					{% endfor %}
+																				</div >
+																			</div>
+																		</a><!-- /.nav-grid__item -->
+																	</div><!-- /.col -->
+																{% endfor %}
+															</div><!-- /.row -->
+													</div>
+												</div>
+											{% endif %}
+										{% endfor %}
+									</div><!-- /.nav-grid -->
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+						
+					</div><!-- /.container -->
+				</div><!-- /.section -->		
+			{% endif %}
+		</div>
+
+		{% include site-footer.html %}
+	</body>
+</html>

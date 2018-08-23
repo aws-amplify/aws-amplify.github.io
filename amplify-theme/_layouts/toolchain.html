@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include site-head.html %}
+    </head>
+	<body class="{{ site.amplify.color_theme }}">
+		{% include site-header.html %}
+		<div class="hero-subheader dark">
+			<div class="container homepage-header">
+				<div class="row">
+					<div class="col-md-7 toolchain-header">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+                                <h1 class="hero-subheader__title">A powerful toolchain built for developers</h1>
+								<div id="button-logo-container">
+                                    <a href="https://github.com/aws-amplify/amplify-cli" target="_blank" class="btn btn--dark btn--rounded btn--w-icon">
+                                        {% if button.icon %}<i class="icon icon--{{ button.icon }}"></i>{% endif %}
+                                        Learn More
+                                    </a>
+									<img id="half-laptop" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/Images/Laptop-Image@2x.png">
+								</div>
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+		<!--<div class="photo-credit">
+			<span>
+				Photo by <a target="_new" href="https://unsplash.com/@juandinella?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Juan Di Nella</a>
+			</span>
+		</div>-->
+
+		<div class="section section-top cli" id="marketing-section">
+			<div class="container">
+                <div class="header col-sm-10">
+                    Effortlessly configure backends
+                </div>
+                <div class="integrate-content inline-block">
+                    <p class="marketing-grid__excerpt subheader">
+			    Create sophisticated serverless backends fast. The CLI includes support for 
+			    authentication, analytics, functions, REST/GraphQL APIs, and 
+			    <a href="https://github.com/aws-amplify/amplify-cli" id="cli-much-more" target="_blank">much more</a>. 
+			    The toolchain uses AWS CloudFormation and enables you to add, modify, and share configurations.
+		    </p>
+				</div>
+				<div class="language-bash highlighter-rouge inline-block section-code-block toolchain-code-block">
+					<div class="highlight">
+						<pre class="highlight section-code-block">
+<code>$ cd &lt;your-app&gt;
+$ amplify init
+$ amplify add &lt;category&gt;
+$ amplify push</code>
+						</pre>
+					</div>    
+				</div>
+                <!-- <img id="code-window" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/Images/Code-Window@2x.png"> -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+
+		<div class="section section-top cli">
+			<div class="container">
+				<div class="header col-sm-10">
+					Hosting for static assets and websites
+                </div>
+                <div class="integrate-content inline-block">
+                    <p class="marketing-grid__excerpt subheader">
+			    Distribute content to end users with low latency and high data transfer speeds via a secure, 
+			    durable, and scalable object storage infrastructure. 
+			    You can perform local testing of AWS Lambda functions, connect them to your APIs, 
+			    and deploy everything in one command.</p>
+				</div>
+				<div class="language-bash highlighter-rouge inline-block section-code-block toolchain-code-block">
+					<div class="highlight">
+						<pre class="highlight section-code-block">
+<code>$ amplify add hosting
+$ amplify publish</code>
+						</pre>
+					</div>    
+				</div>
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+
+		<div class="section section-top cli" id="bottom-section">
+			<div class="container">
+				<div class="header col-sm-10">
+					Easily create APIs and generate client code
+				</div>
+				<div class="integrate-content inline-block">
+					<p class="marketing-grid__excerpt subheader">
+						Define your API using the GraphQL Schema Definition Language (SDL). 
+						The toolchain will expand and transform a full CloudFormation template 
+						that implements your data model.
+					</p>
+				</div>
+				<div class="language-bash highlighter-rouge inline-block section-code-block toolchain-code-block">
+					<div class="highlight">
+						<pre class="highlight section-code-block">
+<code>$ amplify codegen add
+$ amplify codegen generate</code>
+						</pre>
+					</div>    
+				</div>
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		{% include site-footer.html %}
+	</body>
+</html>
