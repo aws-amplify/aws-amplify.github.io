@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<meta name="google-site-verification" content="VJl2taz2CHF9qo4BCVHRgX93Pyd3qHs4zMgqFqIrrMg" />
+<title></title>
+
+
+<link rel="icon" htype="image/png"  href="/images/layout/favicon.png">
+<link rel='apple-touch-icon' type='image/png' href='/images/layout/favicon.png'> <!-- iPhone -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i|Noto+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=latin-ext">
+<link rel="stylesheet" href="/amplify-theme/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> 
+	</head>
+	<body class="" data-spy="scroll" data-target=".js-scrollspy">
+		
+<div class="notification-bar" id="notification-bar">
+	<div class="notification-content">
+		<img class="notification-image" src="/images/icons/Medium/Volume.svg">
+		<p class="notification-text">Announcement: Launching a powerful new toolchain and a new way to build cloud-connected mobile and web apps</p>
+	</div>
+	<div class="close-button">
+		<i id="close-notif" class="icon icon--x"></i>
+	</div>
+</div>
+
+
+
+
+	<div class="offcanvas visible-xs">
+		<ul class="offcanvas__nav">
+			
+				<li>
+					
+						<a href="/media/get_started">
+							Get Started
+						</a>
+					
+				</li>
+			
+				<li>
+					
+						<a href="/media/toolchain">
+							Toolchain
+						</a>
+					
+				</li>
+			
+				<li>
+					
+						<a href="/media/ui_library">
+							Style Guide
+						</a>
+					
+				</li>
+			
+			<li>
+				<a href="/media/quick_start?platform=purejs">
+					Docs
+				</a>
+			</li>
+			<li>
+				<a href="/api">
+					API
+				</a>
+			</li>
+		</ul><!-- /.offcanvas__nav -->
+	</div><!-- /.offcanvas -->
+
+
+
+	<header class="site-header">
+		<div class="container site-header-container">
+			<div class="row">
+				<div class="visible-xs toggle-button-container" id="toggle-button-container">
+					<button class="offcanvas-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button><!-- /.offcanvas-toggle -->
+				</div>
+				
+				<div class="logo-container" id="logo-container">
+					<a href="/" class="site-header__logo">
+						<img src="/images/layout/logo.png">
+						<p class="header-amplify">AWS Amplify </p>
+					</a>
+				</div>
+				
+				
+					<ul class="site-header__nav hidden-xs">
+						
+							<li>
+								
+									<a id="get_started" href="/media/get_started">
+										
+										Get Started
+									</a>
+								
+							</li>
+						
+							<li>
+								
+									<a id="toolchain" href="/media/toolchain">
+										
+										Toolchain
+									</a>
+								
+							</li>
+						
+							<li>
+								
+									<a id="ui_library" href="/media/ui_library">
+										
+										Style Guide
+									</a>
+								
+							</li>
+						
+						<li>
+							<div id="docs-select" class="dropdown">
+								<button class="dropbtn">Docs</button>
+								<div class="dropdown-content">
+									<a href="https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#ios-swift" target="_blank"><p>iOS</p></a>
+									<a href="https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#android-java" target="_blank"><p>Android</p></a>
+									<a href="/media/quick_start?platform=purejs"><p>JavaScript</p></a>
+									<a href="/media/quick_start?platform=react-native"><p>React Native</p></a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div id="api-select" class="dropdown">
+								<button class="dropbtn">API</button>
+								<div class="dropdown-content">
+									<a href="https://aws.github.io/aws-sdk-ios/docs/reference/" target="_blank"><p>iOS</p></a>
+									<a href="https://aws.github.io/aws-sdk-android/docs/reference/" target="_blank"><p>Android</p></a>
+									<a href="/api/" target="_blank"><p>JavaScript</p></a>
+									<a href="/api/" target="_blank"><p>React Native</p></a>
+								</div>
+							</div>
+						</li>
+						<li class="site-search" id="search-input-box">
+							<input placeholder="Search" type="text" id="search-input"><img class="search-image" id="search-image" src="/images/layout/Search.svg"></input>
+						</li>
+					</ul><!-- /.site-header__nav -->
+					<input type="text" id="search-input-xs" class="visible-xs"></input>
+					<button id="collapse-search">Cancel</button>
+				
+			</div><!-- /.row -->
+			<a id="github-logo" target="_blank" href="https://github.com/aws-amplify"><img src="/images/Logos/GitHub-Mark-32px.png" /></a>
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+<script>
+	
+	
+	
+	
+	
+		document.getElementById('ui_library').style.borderBottom = "2px solid #FF9900";
+	
+	
+</script>
+
+	<script>
+		var setBackgroundImage = function() {
+			const search_box = document.getElementById("search-input-xs");
+			search_box.style.backgroundImage = "url('/images/icons/Medium/Search.svg')"; 
+		}
+
+		setBackgroundImage();
+	</script>
+
+
+		<div class="hero-subheader dark">
+			<div class="container homepage-header">
+				<div class="row">
+					<div class="col-md-8 ui-header">
+						<div class="align-container" data-mh>
+							<div class="align-inner">
+								<h1 class="hero-subheader__title">A beautiful component library connected to the cloud</h1>
+								<div id="button-logo-container">
+									<a href="/media/ui_guide" class="btn btn--dark btn--rounded btn--w-icon">
+										
+										Learn More
+									</a>
+									<img id="half-chatbot" class="hidden-xs" src="/images/Images/Chat@1x.png">
+								</div>
+							</div><!-- /.align-inner -->
+						</div><!-- /.align-container -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.hero-subheader -->
+
+		<div id="styleguide-section">
+			<div class="container docs-page-container">
+				<!-- <div class="github-edit-link">
+					<a title="Edit this page on github" class="" target="_blank" rel="noopener noreferrer" 
+					href="https://github.com/aws-amplify/amplify-js/edit/master/docs/media/ui_library.md">
+						<span class="">Edit this page</span> 
+					</a>				
+				</div> -->
+
+				
+
+				<div class="row">
+					<div class="col-md-8 section-top docs-container styleguide-container">
+						<div class="content">
+							<div class="ui-section">
+  <h2 id="colors">Colors</h2>
+
+  <h3 id="ui-colors">UI Colors</h3>
+  <p><span class="excerpt">UI Color for AWS amplify are derived from Amazon’s primary color pallette and examples commonly used through the current AWS websites. Most primary actions are wrapped in Amazon Orange. Dark backgrounds and darker treatments will typically receive the Squid Ink Amazon color treatment.</span></p>
+
+  <p><span class="title">Primary Colors</span>
+<span class="inline-img"><img src="/images/Style_Guide/pc_amazon_orange.png" alt="Amazon Orange" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/pc_squid_ink.png" alt="Squid Ink" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/pc_dark_gray.png" alt="Dark Gray" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/pc_light_gray.png" alt="Light Gray" /></span>
+<span class="title">Secondary Colors</span>
+<span class="inline-img"><img src="/images/Style_Guide/sc_deep_squid_ink.png" alt="Deep Squid Ink" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/sc_dark_blue.png" alt="Dark Blue" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/sc_amazon_ember_blaze.png" alt="Amazon Ember Blaze" /></span></p>
+  <div class="separator"></div>
+
+  <h3 id="extended-library">Extended Library</h3>
+  <p>The extended library uses colors also derived form the primary Amazon palette along with some other colors prominently featured throughout Amazon services. Color derivatives should be used where appropriate and work well for things button highlights, mouseover and color transitions.</p>
+
+  <p><span class="inline-div">
+    <span class="title">Amazon Orange</span>
+    <span class="inline-img"><img src="/images/Style_Guide/el_amazon_orange.png" alt="Amazon Orange" /></span>
+</span></p>
+
+  <p><span class="inline-div">
+    <span class="title">Squid Ink</span>
+    <span class="inline-img"><img src="/images/Style_Guide/el_squid_ink.png" alt="Squid Ink" /></span>
+</span></p>
+
+  <p><span class="inline-div">
+    <span class="title">Prime Blue</span>
+    <span class="inline-img"><img src="/images/Style_Guide/el_prime_blue.png" alt="Prime Blue" /></span>
+</span></p>
+
+  <p><span class="inline-div">
+    <span class="title">Greys</span>
+    <span class="inline-img"><img src="/images/Style_Guide/el_greys.png" alt="Greys" /></span>
+</span></p>
+
+  <p><span class="inline-div">
+    <span class="title">AWS Purple &amp; Blue</span>
+    <span class="inline-img"><img src="/images/Style_Guide/el_purple_blue.png" alt="AWS Purple &amp; Blue" /></span>
+</span></p>
+</div>
+
+<div class="ui-section">
+  <h2 id="typography">Typography</h2>
+
+  <h3 id="primary-typefaces">Primary Typefaces</h3>
+  <p>AWS websites primarily deploy the Amazon Ember typeface with some support from standard Helvetica Neue. In general, all typographical treatments should be limited within these options to maintain consistency across services.  On some smaller treatments, Helvetica may be more appropriate then Ember for visual acuity and readbility and when operating system and browser compatibility are a deep concern.</p>
+
+  <p><span class="title">Font Family</span>
+<span class="inline-img"><img src="/images/Style_Guide/ember_bold.png" alt="Amazon Ember Bold" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/ember_reg.png" alt="Amazon Ember Regular" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/ember_light.png" alt="Amazon Ember Light" /></span>
+<span class="inline-img"><img src="/images/Style_Guide/helvetica_neue.png" alt="Helvetica Neue" /></span></p>
+  <div class="separator"></div>
+
+  <h3 id="type-sizing">Type Sizing</h3>
+  <p>The selection below demonstrates primary typographic treatments derived from  AWS websites. In general typographic treatment and heirarchy should follow the lead below for how to display headers and body type. The proposed font catalogue below is limited to just 5 options to reduce page load and enforce patterns. Please note a heading 3 was not identified in any of the web services.</p>
+
+  <div class="font-example-div">
+    <p><span class="title">HEADING 1</span>
+<span class="font-specific">Amazon Ember</span>
+<span class="font-specific">50px • 500w • 60px height</span>
+<span class="font-link">https://aws.amazon.com/ec2/</span></p>
+
+    <p class="font-example" id="h1">Where every something, being blent together turns to a wild of nothing.</p>
+  </div>
+
+  <div class="font-example-div">
+    <p><span class="title">HEADING 2</span>
+<span class="font-specific">Amazon Ember</span>
+<span class="font-specific">42px • 300w • 53px height</span>
+<span class="font-link">https://developer.amazon.com/apps-and-games</span>
+<span class="font-link">https://developer.amazon.com/alexa</span></p>
+
+    <p class="font-example" id="h2">Where every something, being blent together turns to a wild of nothing.</p>
+  </div>
+
+  <div class="font-example-div">
+    <p><span class="title">HEADING 4</span>
+<span class="font-specific">Amazon Ember</span>
+<span class="font-specific">28px • 300w • 35px height</span>
+<span class="font-link">https://developer.amazon.com/alexa</span></p>
+
+    <p class="font-example" id="h4">Where every something, being blent together turns to a wild of nothing.</p>
+  </div>
+
+  <div class="font-example-div">
+    <p><span class="title">HEADING 5</span>
+<span class="font-specific">Amazon Ember</span>
+<span class="font-specific">21px • 400w • 32px height</span>
+<span class="font-link">https://developer.amazon.com/apps-and-games</span>
+<span class="font-link">https://developer.amazon.com/alexa</span></p>
+
+    <p class="font-example" id="h5">Where every something, being blent together turns to a wild of nothing.</p>
+  </div>
+
+  <div class="font-example-div">
+    <p><span class="title">BODY &amp; PARAGRAPH</span>
+<span class="font-specific">Amazon Ember</span>
+<span class="font-specific">16px • 300w • 24px height
+<span class="font-link">https://developer.amazon.com/apps-and-games</span>
+<span class="font-link">https://developer.amazon.com/alexa</span></span></p>
+
+    <p class="font-example" id="p">And when the vespers within us begin to toll, not to mark frivolous increments of time but to signify permanent footprints in the bold ascent that is self-exploration, not to command followers to a temple for blind worship of others but to summon ourselves to uncover, understand and unleash those divinest of powers within us . . . when those bells begin to rumble and chime, ladies and gentlemen, we will hear a symphony whose beauty conjures Beethoven. -Bob Dylan</p>
+  </div>
+</div>
+
+<!-- <div class="ui-section">
+
+## Controls & Inputs
+
+### Primary and Secondary Buttons
+The button catalogue is composed of two main button styles, primary and secondary, with 3 sizes and icon-only derivatives. A third style is available for critical operations like removing records and irreversible actions. On smaller displays buttons should fill most of the available width of the container. 
+
+<span class="title">Primary Large Button</span>
+<span class="inline-img btn-img">![Primary Large Button](/images/Style_Guide/primary_lg_btn.png)</span>
+<span class="inline-img btn-img">![Primary Large Button Colors](/images/Style_Guide/primary_btn_colors.png)</span>
+<span class="title">Secondary Large Button</span>
+<span class="inline-img btn-img">![Secondary Large Button](/images/Style_Guide/secondary_lg_btn.png)</span>
+<span class="inline-img btn-img">![Secondary Large Button Colors](/images/Style_Guide/secondary_btn_colors.png){: .btn-colors}</span>
+<span class="title">Critical Action Button</span>
+<span class="inline-img btn-img">![Critical Action Button](/images/Style_Guide/critical_action_btn.png)</span>
+<span class="inline-img btn-img">![Critical Action Button Colors](/images/Style_Guide/critical_action_btn_colors.png){: .btn-colors #critical-action-btn-colors}</span>
+<span class="title">Mediums Buttons</span>
+<span class="inline-img btn-img">![Medium Buttons](/images/Style_Guide/medium_btns.png)</span>
+<span class="title">Primary and Secondary</span>
+<span class="inline-img btn-img">![Critical Action Button](/images/Style_Guide/primary_secondary_btns.png)</span>
+<div class="separator"></div>
+
+### Inputs & Fields
+A standarized set of fields and selectors offered below. They support error states with in-line error checking, single and multi-select, icon placement and ghosted instructional text. Inputs should be sensitive to the type of data entry required. Phone number should be automatically formatted and offer only numpads on mobile devices.
+
+<span class="title">Text Fields</span>
+<span class="inline-img">![Text Fields](/images/Style_Guide/text_fields.png)</span>
+<p id="dropdowns">
+<span class="title">Drop Downs/Menus</span>
+<span class="inline-img">![Drop Downs / Menus](/images/Style_Guide/dropdowns_menus.png)</span>
+</p>
+
+<span class="inline-div">
+    <span class="title">Checkboxes</span>
+    <span class="inline-img">![Checkboxes](/images/Style_Guide/checkboxes.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Radios</span>
+    <span class="inline-img">![Radios](/images/Style_Guide/radios.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Toggles</span>
+    <span class="inline-img">![Toggles](/images/Style_Guide/toggles.png)</span>
+</span>
+<div class="separator"></div>
+
+### Toggles, Tabs, & Pagination
+Toggles allow users to switch views and force sort or single-selection viewing options amongst a set. Similarly tabs and pagination allow users to navigate across related content. Pagination and carousel should be used when users need to traverse a large set of content or through related chapters of content.
+
+<span class="inline-div">
+    <span class="title">Big Toggle</span>
+    <span class="inline-img">![Big Toggle](/images/Style_Guide/big_toggle.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Small Toggle</span>
+    <span class="inline-img">![Small Toggle](/images/Style_Guide/small_toggle.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Tabs</span>
+    <span class="inline-img">![Tabs](/images/Style_Guide/tabs.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Pagination & Carousel</span>
+    <span class="inline-img">![Pagination & Carousel](/images/Style_Guide/pagination_carousel.png)</span>
+</span>
+</div> -->
+
+<!--
+<div class="ui-section">
+## Widgets
+
+### Modals & Dialogues
+Two main modal interactions are offered. The modal is informational with a primary action attached. The Dialog is employed when a choice is implied in the interaction. The user should be able to exit modals instead of being locked in. On smaller screens models should present in the middle of display port and take up a majority of the screen width. 
+
+<span class="inline-div">
+    <span class="title">Large Modal</span>
+    <span class="inline-img">![Large Modal](/images/Style_Guide/large_modal.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Large Dialog</span>
+    <span class="inline-img no-right-margin">![Large Dialog](/images/Style_Guide/large_dialog.png)</span>
+</span>
+<div class="separator"></div>
+
+### Notifications & Tooltips
+Notifications & helpers are offered in a few main styles. Notifications should be used to inform users when successful operations or problems have occurred and occasionally offer shortcuts to new content (like messages) or actions (like undo). Tooltips are used inline to offer more information. On mobile devices, notifications must appear at the top of the display port in a consistent location. 
+
+<span class="inline-div">
+    <span class="title">Toast</span>
+    <span class="inline-img">![Toast](/images/Style_Guide/toast.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Alert</span>
+    <span class="inline-img">![Alert](/images/Style_Guide/alert.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Graphic Toast with Link</span>
+    <span class="inline-img">![Graphic Toast with Link](/images/Style_Guide/graphic_toast.png)</span>
+</span>
+<span class="inline-div" id="tooltips">
+    <span class="title">Tooltips</span>
+    <span class="inline-img no-right-margin">![Tooltips](/images/Style_Guide/tooltips.png)</span>
+</span>
+<div class="separator"></div>
+
+### Date Pickers
+Notifications & helpers are offered in a few main styles. Notifications should be used to inform users when successful operations or problems have occurred and occasionally offer shortcuts to new content (like messages) or actions (like undo). Tooltips are used inline to offer more information. On mobile devices, notifications must appear at the top of the display port in a consistent location. 
+
+<span class="inline-div">
+    <span class="title">Multi-Select Calendar</span>
+    <span class="inline-img">![Multi-Select Calendar](/images/Style_Guide/multi_select_calendar.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Single-Select Calendar</span>
+    <span class="inline-img">![Single-Select Calendar](/images/Style_Guide/single_select_calendar.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Multi-Select Calendar on Mobile</span>
+    <span class="inline-img">![Multi-Select Calendar on Mobile](/images/Style_Guide/multi_select_calendar_mobile.png)</span>
+</span>
+</div> -->
+
+<h2 id="aws-components">AWS Components</h2>
+
+<h3 id="user-authentication">User Authentication</h3>
+<p>The authentication component utilizes the styles outlined in the styleguide to provide a minimal, yet lightly AWS-branded experience out of the box.</p>
+
+<p><span class="inline-div">
+    <span class="title">New User Account</span>
+    <span class="inline-img no-right-margin"><img src="/images/Style_Guide/new_user_account.png" alt="New User Account" /></span>
+</span>
+<span class="inline-div" id="recover-user">
+    <span class="title" id="recover-user-title">Recover User Account</span>
+    <span class="inline-img no-right-margin"><img src="/images/Style_Guide/recover_user_account.png" alt="Recover User Account" /></span>
+    <span class="inline-img no-right-margin"><img src="/images/Style_Guide/recover_user_account2.png" alt="Recover User Account" /></span>
+</span></p>
+
+<p><span class="inline-div">
+    <span class="title">Sign Into Existing Account</span>
+    <span class="inline-img small-right-margin"><img src="/images/Style_Guide/sign_in_existing.png" alt="Sign into Existing Account" /></span>
+</span>
+<span class="inline-div">
+    <span class="title">Confirm Signup</span>
+    <span class="inline-img no-right-margin"><img src="/images/Style_Guide/confirm_signup.png" alt="Confirm Signup" /></span>
+</span></p>
+<div class="separator"></div>
+
+<!-- ### User Authentication: Social Logins
+The authentication component utilizes the styles outlined in the styleguide to provide a minimal, yet lightly AWS-branded experience out of the box.
+
+<span class="inline-div">
+    <span class="title">New User Account</span>
+    <span class="inline-img small-right-margin">![New User Account](/images/Style_Guide/new_user_account_social.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">User Account Verification</span>
+    <span class="inline-img no-right-margin">![User Account Verification](/images/Style_Guide/user_account_veri.png)</span>
+</span>
+<div class="separator"></div> -->
+
+<h3 id="user-authentication-totp">User Authentication: TOTP</h3>
+<p>2-factor authentication can be enabled for customers. Users are given the option to add additional account security. Some light instruction should be included to guide the customer through the necessary steps.</p>
+
+<p><span class="title">Setup TOTP</span>
+<span class="inline-img no-right-margin"><img src="/images/Style_Guide/setup_totp.png" alt="Setup TOTP" /></span></p>
+<div class="separator"></div>
+
+<h3 id="user-authentication-mobile-framing">User Authentication Mobile Framing</h3>
+<p>On mobile and small screens the components should expand to fill the majority of available screen space within one and two column layouts for major inputs.</p>
+
+<p><span class="inline-div mobile-right-margin">
+    <span class="title">New User Account</span>
+    <span class="inline-img small-right-margin"><img src="/images/Style_Guide/new_user_account_mobile.png" alt="New User Account" /></span>
+</span></p>
+
+<p><span class="inline-div">
+    <span class="title">Reset Password</span>
+    <span class="inline-img no-right-margin"><img src="/images/Style_Guide/reset_password_mobile.png" alt="Reset Password" /></span>
+</span></p>
+
+<p><span class="inline-div mobile-right-margin" id="new-user-mobile-keyboard">
+    <span class="title">New User Account</span>
+    <span class="inline-img small-right-margin"><img src="/images/Style_Guide/new_user_account_mobile_keyboard.png" alt="New User Account" /></span>
+</span></p>
+
+<p><span class="inline-div">
+    <span class="title">Statusbar Treatment</span>
+    <span class="inline-img no-right-margin statusbar-img"><img src="/images/Style_Guide/status_bar_orange.png" alt="Statusbar Treatment" /></span>
+    <span class="statusbar-text">On color and dark backgrounds the status should display as white assets</span>
+    <span class="inline-img no-right-margin statusbar-img"><img src="/images/Style_Guide/status_bar_white.png" alt="Statusbar Treatment" /></span>
+    <span class="statusbar-text">On very light and white backgrounds the statusbar should display as dark gray assets</span>
+</span></p>
+
+<div class="separator"></div>
+
+<!-- ### Storage: Photo Picker
+The storage component allows the user to select among available photos. The selection action can be initated from any type of “picker” screen (an empty example below) which then launches a scrollable GUI displaying the available assets. The picker support both single and multi-select.
+
+<span class="inline-div">
+    <span class="title">Photo Picker</span>
+    <span class="inline-img small-right-margin">![Photo Picker](/images/Style_Guide/photo_picker_empty.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Photo Picker</span>
+    <span class="inline-img no-right-margin">![Photo Picker](/images/Style_Guide/photo_picker.png)</span>
+</span>
+<span class="inline-div mobile-right-margin">
+    <span class="title">Photo Picker Mobile</span>
+    <span class="inline-img small-right-margin">![Photo Picker Mobile](/images/Style_Guide/photo_picker_mobile_empty.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Photo Picker Mobile</span>
+    <span class="inline-img no-right-margin">![Photo Picker Mobile](/images/Style_Guide/photo_picker_mobile.png)</span>
+</span>
+
+<div class="separator"></div>
+
+### Interactions
+Interactions and chat bots allow you to build AI-powered communication into your products. Out of the box design features simple visuals based on the minimal brand which can be customized to your liking. Mobile interactions should exapnd into fullscreen displays.
+
+<span class="inline-div">
+    <span class="title">Messages List</span>
+    <span class="inline-img">![Message List](/images/Style_Guide/message_list.png)</span>
+</span>
+<span class="inline-div" id="message-chat">
+    <span class="title">Message Chat</span>
+    <span class="inline-img">![Message Chat](/images/Style_Guide/message_chat.png)</span>
+</span>
+<span class="inline-div">
+    <span class="title">Message Chat Site</span>
+    <span class="inline-img">![Message Chat Site](/images/Style_Guide/message_chat_site.png)</span>
+</span> -->
+
+						</div><!-- /.content -->
+					</div><!-- /.col -->
+					<div class="col-md-4 col-md-offset-1 dev-guide-container styleguide-nav">
+						<div class="sections-list-wrapper">
+							<div class="sections-list js-affix js-scrollspy styleguide-affix">
+								<div class="dev-guide"> 
+									
+										<div class="left-nav-section hidden-xs">
+											<div class="feature-list">
+                                                <ul class="nav">
+												
+														<li><a href="#colors" class="js-smooth-scroll style-category">Colors</a></li>
+                                                
+														<li><a href="#typography" class="js-smooth-scroll style-category">Typography</a></li>
+                                                
+														<li><a href="#aws-components" class="js-smooth-scroll style-category">Components</a></li>
+                                                
+                                                </ul>   
+											</div>
+										</div>
+									
+								</div>						
+							</div><!-- /.sections-list -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.section -->
+		<!-- <div class="section section--grey"> -->
+			<!-- <div class="container"> -->
+				<!-- <div class="row"> -->
+					<!-- <div class="col-md-7"> -->
+						<!-- <div id="disqus_thread"></div>
+<script>
+	/**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+	 /*
+	var disqus_config = function () {
+	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+	*/
+
+	// Adds the onNewComment callback to the disqus_config of the embed code
+	// that sends 'New Comment' events over to Google Analytics.
+	// The callback can also be used for any other analytics service like Parse.ly, Chartbeat, Mixpanel
+	var disqus_config = function() {
+			this.callbacks.onNewComment = [function(comment) {
+				ga('send', {
+					'hitType': 'event',            // Required.
+					'eventCategory': 'Comments',   // Required.
+					'eventAction': 'New Comment',  // Required.
+					'eventLabel': 'New Comment'
+				});
+			}];
+	};
+
+	(function() {
+		var d = document, s = d.createElement('script');
+
+		s.src = 'https://aws-amplify.disqus.com/embed.js';
+
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+ 
+									 -->
+					<!-- </div>/.col -->
+				<!-- </div>/.row -->
+			<!-- </div>/.container -->
+		<!-- </div>/.section -->
+		<div class="js-footer-area">
+			
+			
+			
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="/" class="site-footer__logo">
+							<img src="/images/layout/logo-footer.png">
+						</a>
+					
+					
+					
+				 
+						<p class="site-footer__copyright">
+							AWS Amplify is supported by Amazon Web Services </br>
+							© 2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+						</p>
+						
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://gitter.im/AWS-Amplify/Lobby/" target="_blank" class="social-list__item social-list__item--gitter">
+										<i class="icon icon--gitter"></i>
+									</a>
+								</li>
+							
+								<li>
+									<a href="https://github.com/aws-amplify" target="_blank" class="social-list__item social-list__item--github">
+										<i class="icon icon--github"></i>
+									</a>
+								</li>
+							
+								<li>
+									<a href="https://twitter.com/awsformobile" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+								<li>
+									<a href="https://www.youtube.com/channel/UCd6MoB9NC6uYN2grvUNT-Zg" target="_blank" class="social-list__item social-list__item--youtube">
+										<i class="icon icon--youtube"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="/amplify-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/scripts.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115615468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115615468-1',{
+    'linker': {
+      'accept_incoming': true
+    }
+  });
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
+<script type="text/javascript"> 
+var setAlgoliaSearch = function() {
+	if (window.innerWidth > 766){
+		docsearch({ 
+		    apiKey: '0d52a3ea92602545de13731e81c3c7f8', 
+		    indexName: 'aws_amplify',  
+			inputSelector: '#search-input',
+			//  algoliaOptions: {"facetFilters":["tags:current"],"hitsPerPage":5},      
+		    debug: false // Set debug to true if you want to inspect the dropdown 
+		}) 
+	}
+	else {
+		docsearch({ 
+		    apiKey: '0d52a3ea92602545de13731e81c3c7f8', 
+		    indexName: 'aws_amplify',  
+			inputSelector: '#search-input-xs',
+			//  algoliaOptions: {"facetFilters":["tags:current"],"hitsPerPage":5},      
+		    debug: false // Set debug to true if you want to inspect the dropdown 
+		}); 
+	}
+}
+
+setAlgoliaSearch()
+
+window.onresize = setAlgoliaSearch;
+</script> 
+
+<script>
+		((window.gitter = {}).chat = {}).options = {
+		  room: 'aws-amplify/Lobby' 
+		};
+	  </script>
+	  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer>
+</script>
+		</div><!-- /.js-footer-area -->
+	</body>
+</html>

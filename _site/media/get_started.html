@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<meta name="google-site-verification" content="VJl2taz2CHF9qo4BCVHRgX93Pyd3qHs4zMgqFqIrrMg" />
+<title></title>
+
+
+<link rel="icon" htype="image/png"  href="/images/layout/favicon.png">
+<link rel='apple-touch-icon' type='image/png' href='/images/layout/favicon.png'> <!-- iPhone -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i|Noto+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=latin-ext">
+<link rel="stylesheet" href="/amplify-theme/assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> 
+	</head>
+	<body class="">
+		
+<div class="notification-bar" id="notification-bar">
+	<div class="notification-content">
+		<img class="notification-image" src="/images/icons/Medium/Volume.svg">
+		<p class="notification-text">Announcement: Launching a powerful new toolchain and a new way to build cloud-connected mobile and web apps</p>
+	</div>
+	<div class="close-button">
+		<i id="close-notif" class="icon icon--x"></i>
+	</div>
+</div>
+
+
+
+
+	<div class="offcanvas visible-xs">
+		<ul class="offcanvas__nav">
+			
+				<li>
+					
+						<a href="/media/get_started">
+							Get Started
+						</a>
+					
+				</li>
+			
+				<li>
+					
+						<a href="/media/toolchain">
+							Toolchain
+						</a>
+					
+				</li>
+			
+				<li>
+					
+						<a href="/media/ui_library">
+							Style Guide
+						</a>
+					
+				</li>
+			
+			<li>
+				<a href="/media/quick_start?platform=purejs">
+					Docs
+				</a>
+			</li>
+			<li>
+				<a href="/api">
+					API
+				</a>
+			</li>
+		</ul><!-- /.offcanvas__nav -->
+	</div><!-- /.offcanvas -->
+
+
+
+	<header class="site-header">
+		<div class="container site-header-container">
+			<div class="row">
+				<div class="visible-xs toggle-button-container" id="toggle-button-container">
+					<button class="offcanvas-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button><!-- /.offcanvas-toggle -->
+				</div>
+				
+				<div class="logo-container" id="logo-container">
+					<a href="/" class="site-header__logo">
+						<img src="/images/layout/logo.png">
+						<p class="header-amplify">AWS Amplify </p>
+					</a>
+				</div>
+				
+				
+					<ul class="site-header__nav hidden-xs">
+						
+							<li>
+								
+									<a id="get_started" href="/media/get_started">
+										
+										Get Started
+									</a>
+								
+							</li>
+						
+							<li>
+								
+									<a id="toolchain" href="/media/toolchain">
+										
+										Toolchain
+									</a>
+								
+							</li>
+						
+							<li>
+								
+									<a id="ui_library" href="/media/ui_library">
+										
+										Style Guide
+									</a>
+								
+							</li>
+						
+						<li>
+							<div id="docs-select" class="dropdown">
+								<button class="dropbtn">Docs</button>
+								<div class="dropdown-content">
+									<a href="https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#ios-swift" target="_blank"><p>iOS</p></a>
+									<a href="https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#android-java" target="_blank"><p>Android</p></a>
+									<a href="/media/quick_start?platform=purejs"><p>JavaScript</p></a>
+									<a href="/media/quick_start?platform=react-native"><p>React Native</p></a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div id="api-select" class="dropdown">
+								<button class="dropbtn">API</button>
+								<div class="dropdown-content">
+									<a href="https://aws.github.io/aws-sdk-ios/docs/reference/" target="_blank"><p>iOS</p></a>
+									<a href="https://aws.github.io/aws-sdk-android/docs/reference/" target="_blank"><p>Android</p></a>
+									<a href="/api/" target="_blank"><p>JavaScript</p></a>
+									<a href="/api/" target="_blank"><p>React Native</p></a>
+								</div>
+							</div>
+						</li>
+						<li class="site-search" id="search-input-box">
+							<input placeholder="Search" type="text" id="search-input"><img class="search-image" id="search-image" src="/images/layout/Search.svg"></input>
+						</li>
+					</ul><!-- /.site-header__nav -->
+					<input type="text" id="search-input-xs" class="visible-xs"></input>
+					<button id="collapse-search">Cancel</button>
+				
+			</div><!-- /.row -->
+			<a id="github-logo" target="_blank" href="https://github.com/aws-amplify"><img src="/images/Logos/GitHub-Mark-32px.png" /></a>
+		</div><!-- /.container -->
+	</header><!-- /.site-header -->
+
+<script>
+	
+		document.getElementById('get_started').style.borderBottom = "2px solid #FF9900";
+	
+	
+	
+	
+	
+	
+</script>
+
+	<script>
+		var setBackgroundImage = function() {
+			const search_box = document.getElementById("search-input-xs");
+			search_box.style.backgroundImage = "url('/images/icons/Medium/Search.svg')"; 
+		}
+
+		setBackgroundImage();
+	</script>
+
+
+		
+		<div class="page-container">
+			<div class="section-category">
+		
+				<div class="container">
+					<div class="row">
+	
+						<div>
+							<div class="dev-guide-heading">
+								<div class="row">
+									
+										<div class="col-sm-8 col-lg-8">
+											<span>
+												<div class="dev-guide-content" data-mh>
+													<p class="dev-guide__title">Get Started</p>
+													<!-- <p class="dev-guide__excerpt">AWS Amplify comes with building blocks for frontend and mobile developers to interact with the Cloud. You can mix and match the categories below as needed.</p> -->
+												</div><!-- /.nav-grid__content -->
+											</span><!-- /.nav-grid__item -->
+										</div><!-- /.col -->
+									
+								</div><!-- /.row -->
+								<div>
+                                    <!-- <a href="cli_guide"> <button class="btn install-amplify-cli" >Install Amplify CLI</button> </a> -->
+                                    <!-- <a href="toolchain">
+                                        <div id="learn-more-about-cli-box">
+                                            <p class="amplify-link">Learn more about the CLI</p>
+                                            <img class="down-arrow" src="/images/icons/Small/More-Button-no-shadow.svg" />
+                                        </div>
+                                    </a> -->
+								</div>
+							</div><!-- /.nav-grid -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+            </div><!-- /.section -->
+		
+            <div class="container">
+                <div class="row">
+                    <div class="section-top section-top-category section-top-quickstart">
+                        <div class="container">
+                            <div class="inline-block">
+                                <div class="header col-sm-7">
+                                    Sign up for an AWS account
+                                </div>
+                                <div class="subheader col-sm-7">
+                                    There are no upfront charges or any term commitments to create an AWS account and signing up gives you immediate access to the AWS Free Tier
+                                </div>
+                            </div>
+                            <div>
+                                <a href="https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation" target="_blank"> 
+                                    <button class="btn" id="aws-signup-btn">Create an AWS Account</button> 
+                                </a>
+                            </div>
+                            <img id="aws-logo" class="hidden-xs" src="/images/Logos/aws_logo.png" />
+                            <div class="div-number">1</div>
+                        </div>
+                    </div>
+                </div><!-- /.row --> 
+            </div><!-- /.container -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="section-top section-top-category section-top-quickstart">
+                        <div class="container">
+                            <div class="inline-block">
+                                <div class="header">
+                                    Install the CLI
+                                </div>
+                                <!--Verify that you are running at least Node.js version 8.x or greater and npm version 5.x or greater by running `node -v` and `npm -v` in a terminal/console window.
+                                {: .callout .callout--action}
+
+                                - Install and configure the Amplify CLI.-->
+                            </div>
+                            <div class="subheader above-code-block">
+                                The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app. 
+                            </div>
+                            <ul>
+                                <li class="above-code-block">
+                                    Install <a id="node-link" href="https://nodejs.org/en/download/" target="_blank">Node.js®</a> and <a id="npm-link" href="https://www.npmjs.com/get-npm" target="_blank">npm</a> if they are not already on your machine.
+                                </li>
+                            </ul>
+                            <p class="above-code-block callout callout--action">Verify that you are running at least Node.js version 8.x or greater and npm version 5.x or greater by running <span class="inline-bash">node -v</span> and <span class="inline-bash">npm -v</span> in a terminal/console window.</p>
+                            <ul>
+                                <li class="above-code-block">
+                                    Install and configure the Amplify CLI.
+                                </li>
+                            </ul>
+                            <div class="language-bash highlighter-rouge inline-block section-code-block">
+                                <div class="highlight">
+                                    <pre class="highlight">
+<code>$ npm install -g @aws-amplify/cli
+$ amplify configure</code>
+                                    </pre>
+                                </div>    
+                            </div>
+                            <div class="div-number">2</div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->      
+            </div><!-- /.container -->
+			
+            <div class="container">
+                <div class="row">
+                    <div class="section-top section-top-category section-top-quickstart"  id="bottom-section">
+                        <div class="container">
+                            <div class="inline-block">
+                                <div class="header" id="get-started-header">
+                                    Build your app
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="row-title">
+                                    <p class="title">Platforms with Amplify Library Support</p>
+                                    <p class="subtitle">AWS Amplify provides a declarative easy-to-use library for building cloud-powered web and mobile applications.</p>
+                                </div>
+                                <div class="platform-container">
+                                    <div class="platform-box">
+                                        <img class="circle-badge" src="/images/Circle-Badge/JS@1x.png" />
+                                        <p class="platform-title">Build with JavaScript</p>
+                                        <a href="get_started"> <button class="btn">Get Started</button> </a>
+                                    </div>
+                                    <div class="platform-box">
+                                        <img class="circle-badge" src="/images/Circle-Badge/React@1x.png" />
+                                        <p class="platform-title">Build with React</p>
+                                        <a href="react_guide"> <button class="btn">Get Started</button> </a>
+                                    </div>
+                                    <div class="platform-box">
+                                        <img class="circle-badge" src="/images/Circle-Badge/ReactNat@1x.png" />
+                                        <p class="platform-title">Build with React Native</p>
+                                        <a href="react_native_guide"> <button class="btn">Get Started</button> </a>
+                                    </div>
+                                    <div class="platform-box">
+                                        <img class="circle-badge" src="/images/Circle-Badge/Angular@1x.png" />
+                                        <p class="platform-title">Build with Angular</p>
+                                        <a href="angular_guide"> <button class="btn">Get Started</button> </a>
+                                    </div>
+                                </div> -->
+                            <!-- </div>/.row -->
+                            <div class="row">
+                                <!-- <div class="row-title">
+                                    <p class="title">Platforms with Amplify Library Support</p>
+                                    <p class="subtitle">AWS Amplify provides a delcarative easy-to-use library for building cloud-powered web and mobile applications.</p>
+                                </div> -->
+                                <div class="platform-container">
+                                        <div class="platform-box">
+                                            <a href="https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#ios-swift" target="_blank">
+                                                <img class="circle-badge" src="/images/Circle-Badge/Apple@1x.png" />
+                                                <p class="platform-title">iOS</p>
+                                                <button class="btn">Get Started</button>
+                                            </a>
+                                        </div>
+                                        <div class="platform-box">
+                                            <a href="https://docs.aws.amazon.com/aws-mobile/latest/developerguide/getting-started.html#android-java" target="_blank">
+                                                <img class="circle-badge" src="/images/Circle-Badge/Droid@1x.png" />
+                                                <p class="platform-title">Android</p>
+                                                <button class="btn">Get Started</button>
+                                            </a>
+                                        </div>
+                                        <div class="platform-box">
+                                            <a href="/media/quick_start">
+                                                <img class="circle-badge" src="/images/Circle-Badge/web.png" />
+                                                <p class="platform-title">Web</p>
+                                                <button class="btn">Get Started</button>
+                                            </a>
+                                        </div>
+                                        <div class="platform-box">
+                                            <a href="/media/quick_start?platform=react-native">
+                                                <img class="circle-badge" src="/images/Circle-Badge/ReactNat@1x.png" />
+                                                <p class="platform-title">React Native</p>
+                                                <button class="btn">Get Started</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                            </div><!-- /.row -->
+                            <div class="div-number">3</div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->      
+            </div><!-- /.container -->
+        </div>
+
+		
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					
+						<a href="/" class="site-footer__logo">
+							<img src="/images/layout/logo-footer.png">
+						</a>
+					
+					
+					
+				 
+						<p class="site-footer__copyright">
+							AWS Amplify is supported by Amazon Web Services </br>
+							© 2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+						</p>
+						
+					
+				</div><!-- /.col -->
+				
+					<div class="col-sm-6 align-right">
+						<ul class="social-list">
+							
+								<li>
+									<a href="https://gitter.im/AWS-Amplify/Lobby/" target="_blank" class="social-list__item social-list__item--gitter">
+										<i class="icon icon--gitter"></i>
+									</a>
+								</li>
+							
+								<li>
+									<a href="https://github.com/aws-amplify" target="_blank" class="social-list__item social-list__item--github">
+										<i class="icon icon--github"></i>
+									</a>
+								</li>
+							
+								<li>
+									<a href="https://twitter.com/awsformobile" target="_blank" class="social-list__item social-list__item--twitter">
+										<i class="icon icon--twitter"></i>
+									</a>
+								</li>
+							
+								<li>
+									<a href="https://www.youtube.com/channel/UCd6MoB9NC6uYN2grvUNT-Zg" target="_blank" class="social-list__item social-list__item--youtube">
+										<i class="icon icon--youtube"></i>
+									</a>
+								</li>
+							
+						</ul><!-- /.social-list -->
+					</div><!-- /.col -->
+				
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</footer><!-- /.site-footer -->
+
+
+<script src="/amplify-theme/assets/js/vendor/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/vendor/bootstrap/affix.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/vendor/bootstrap/scrollspy.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/vendor/matchHeight.min.js"></script>
+<script type="text/javascript" src="/amplify-theme/assets/js/scripts.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115615468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115615468-1',{
+    'linker': {
+      'accept_incoming': true
+    }
+  });
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
+<script type="text/javascript"> 
+var setAlgoliaSearch = function() {
+	if (window.innerWidth > 766){
+		docsearch({ 
+		    apiKey: '0d52a3ea92602545de13731e81c3c7f8', 
+		    indexName: 'aws_amplify',  
+			inputSelector: '#search-input',
+			//  algoliaOptions: {"facetFilters":["tags:current"],"hitsPerPage":5},      
+		    debug: false // Set debug to true if you want to inspect the dropdown 
+		}) 
+	}
+	else {
+		docsearch({ 
+		    apiKey: '0d52a3ea92602545de13731e81c3c7f8', 
+		    indexName: 'aws_amplify',  
+			inputSelector: '#search-input-xs',
+			//  algoliaOptions: {"facetFilters":["tags:current"],"hitsPerPage":5},      
+		    debug: false // Set debug to true if you want to inspect the dropdown 
+		}); 
+	}
+}
+
+setAlgoliaSearch()
+
+window.onresize = setAlgoliaSearch;
+</script> 
+
+<script>
+		((window.gitter = {}).chat = {}).options = {
+		  room: 'aws-amplify/Lobby' 
+		};
+	  </script>
+	  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer>
+</script>
+	</body>
+</html>
