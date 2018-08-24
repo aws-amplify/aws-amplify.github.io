@@ -25,7 +25,8 @@
 												</div><!-- /.nav-grid__content -->
 											</span><!-- /.nav-grid__item -->
 										</div><!-- /.col -->
-									{% endfor %}
+                                    {% endfor %}
+                                    <p class="from-awsmobile callout callout--action">Welcome to AWS Amplify, the new way to build mobile and web apps.</p>
 								</div><!-- /.row -->
 								<div>
                                     <!-- <a href="cli_guide"> <button class="btn install-amplify-cli" >Install Amplify CLI</button> </a> -->
@@ -70,7 +71,7 @@
                 <div class="row">
                     <div class="section-top section-top-category section-top-quickstart">
                         <div class="container">
-                            <div class="inline-block">
+                            <div>
                                 <div class="header">
                                     Install the CLI
                                 </div>
@@ -79,28 +80,31 @@
 
                                 - Install and configure the Amplify CLI.-->
                             </div>
-                            <div class="subheader above-code-block">
-                                The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app. 
+                            <div class="cli-content">
+                                <div class="subheader above-code-block">
+                                    The Amplify Command Line Interface (CLI) is a unified toolchain to create, integrate, and manage the AWS cloud services for your app. 
+                                </div>
+                                <ul>
+                                    <li class="above-code-block">
+                                        Install <a id="node-link" href="https://nodejs.org/en/download/" target="_blank">Node.js®</a> and <a id="npm-link" href="https://www.npmjs.com/get-npm" target="_blank">npm</a> if they are not already on your machine.
+                                    </li>
+                                </ul>
+                                <p class="above-code-block callout callout--action">Verify that you are running at least Node.js version 8.x or greater and npm version 5.x or greater by running <span class="inline-bash">node -v</span> and <span class="inline-bash">npm -v</span> in a terminal/console window.</p>
+                                <ul>
+                                    <li class="above-code-block">
+                                        Install and configure the Amplify CLI.
+                                    </li>
+                                </ul>
+                                <div class="language-bash highlighter-rouge inline-block section-code-block">
+                                    <div class="highlight">
+                                        <pre class="highlight">
+    <code>$ npm install -g @aws-amplify/cli
+    $ amplify configure</code>
+                                        </pre>
+                                    </div>    
+                                </div>
                             </div>
-                            <ul>
-                                <li class="above-code-block">
-                                    Install <a id="node-link" href="https://nodejs.org/en/download/" target="_blank">Node.js®</a> and <a id="npm-link" href="https://www.npmjs.com/get-npm" target="_blank">npm</a> if they are not already on your machine.
-                                </li>
-                            </ul>
-                            <p class="above-code-block callout callout--action">Verify that you are running at least Node.js version 8.x or greater and npm version 5.x or greater by running <span class="inline-bash">node -v</span> and <span class="inline-bash">npm -v</span> in a terminal/console window.</p>
-                            <ul>
-                                <li class="above-code-block">
-                                    Install and configure the Amplify CLI.
-                                </li>
-                            </ul>
-                            <div class="language-bash highlighter-rouge inline-block section-code-block">
-                                <div class="highlight">
-                                    <pre class="highlight">
-<code>$ npm install -g @aws-amplify/cli
-$ amplify configure</code>
-                                    </pre>
-                                </div>    
-                            </div>
+                            <video class="video" controls width="450" height="330" src="https://s3.us-east-2.amazonaws.com/amplify-get-started-video/amplifyclisetup.mp4"></video>
                             <div class="div-number">2</div>
                         </div>
                     </div>
@@ -165,7 +169,7 @@ $ amplify configure</code>
                                             </a>
                                         </div>
                                         <div class="platform-box">
-                                            <a href="{% if jekyll.environment == 'production' %}{{ site.amplify.docs_baseurl }}{% endif %}/media/quick_start">
+                                            <a href="{% if jekyll.environment == 'production' %}{{ site.amplify.docs_baseurl }}{% endif %}/media/quick_start?platform=purejs">
                                                 <img class="circle-badge" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/Circle-Badge/web.png" />
                                                 <p class="platform-title">Web</p>
                                                 <button class="btn">Get Started</button>
