@@ -92,6 +92,25 @@
 			return 0;
 	};
 
+	if ( $.urlParam( 'fromawsmobile' )) {
+		//console.log($.urlParam( 'fromawsmobile' ))
+		if ( $.urlParam( 'fromawsmobile' ) == 'true') {
+			if ($('.from-awsmobile')) {
+				$('.from-awsmobile').show();
+			}
+		}
+		else {
+			if ($('.from-awsmobile')) {
+				$('.from-awsmobile').hide();
+			}
+		}
+	}
+	else {
+		if ($('.from-awsmobile')) {
+			$('.from-awsmobile').hide();
+		}
+	}
+
 	// Reduce
 	$.fn.reduce = function( fnReduce, initialValue ) {
 		var values = this,
