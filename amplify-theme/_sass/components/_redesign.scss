@@ -2767,6 +2767,10 @@ li {
         width: 60%;
         margin-bottom: 50px;
 
+        @media (max-width: 828px) {
+            width: 100%;
+        }
+
         .marketing-grid__excerpt {
             font-family: "Amazon Ember", "Helvetica", sans-serif;
             font-size: 16px;
