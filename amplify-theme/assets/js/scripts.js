@@ -350,29 +350,6 @@
 		}
 	);
 
-	// Collapse steps
-	$.fn.toggleText = function(t1, t2){
-		if (this.text() == t1) this.text(t2);
-		else                   this.text(t1);
-		return this;
-	};
-	for (let i = 1; i <= 4; i++) {
-		$('#step'+i+'-collapse').click(function() {
-			$('#step'+i).toggle("normal");
-			$(this).toggleText('Collapse', 'Expand');
-			if ($.urlParam('step')) {
-				var step = $.urlParam('step');
-				if (step == i) {
-					$('#step'+i).show()
-				}
-				else {
-					$('#step'+i).hide()
-				}
-			}
-		})
-	}
-
-
 	var showNotificationBar = function ( messageDate ) {
 
 		var lastMessageReceived;
