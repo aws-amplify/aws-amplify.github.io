@@ -350,6 +350,29 @@
 		}
 	);
 
+	// Collapse steps
+	$.fn.toggleText = function(t1, t2){
+		if (this.text() == t1) this.text(t2);
+		else                   this.text(t1);
+		return this;
+	};
+	for (let i = 1; i <= 4; i++) {
+		$('#step'+i+'-collapse').click(function() {
+			$('#step'+i).toggle("normal");
+			$(this).toggleText('Collapse', 'Expand');
+			if ($.urlParam('step')) {
+				var step = $.urlParam('step');
+				if (step == i) {
+					$('#step'+i).show()
+				}
+				else {
+					$('#step'+i).hide()
+				}
+			}
+		})
+	}
+
+
 	var showNotificationBar = function ( messageDate ) {
 
 		var lastMessageReceived;
@@ -372,7 +395,7 @@
 	}
 
 	// When the last message is received. Typicaly the announcement time
-	// showNotificationBar( new Date('August 1, 2018 11:00:00') );
+	showNotificationBar( new Date('August 27, 2018 9:00:00') );
 
 	// Hide magnifying glass in search bar
 	// var hideSearchIcon = function() {
