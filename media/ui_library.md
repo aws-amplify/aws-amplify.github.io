@@ -6,25 +6,25 @@ layout: ui_library
 ## Colors
 
 ### UI Colors
-<span class="excerpt">UI Color for AWS amplify are derived from Amazon’s primary color pallette and examples commonly used through the current AWS websites. Most primary actions are wrapped in Amazon Orange. Dark backgrounds and darker treatments will typically receive the Squid Ink Amazon color treatment.</span>
+<span class="excerpt">UI Color for AWS amplify are derived from a primary and secondary color pallette. Most primary actions are wrapped in Orange. Dark backgrounds and darker treatments will typically receive the Squid Ink color treatment.</span>
 
 <span class="title">Primary Colors</span>
-<span class="inline-img">![Amazon Orange]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/pc_amazon_orange.png)</span>
+<span class="inline-img">![Orange]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/pc_amazon_orange.png)</span>
 <span class="inline-img">![Squid Ink]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/pc_squid_ink.png)</span>
 <span class="inline-img">![Dark Gray]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/pc_dark_gray.png)</span>
 <span class="inline-img">![Light Gray]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/pc_light_gray.png)</span>
 <span class="title">Secondary Colors</span>
 <span class="inline-img">![Deep Squid Ink]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/sc_deep_squid_ink.png)</span>
 <span class="inline-img">![Dark Blue]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/sc_dark_blue.png)</span>
-<span class="inline-img">![Amazon Ember Blaze]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/sc_amazon_ember_blaze.png)</span>
+<span class="inline-img">![Ember Blaze]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/sc_amazon_ember_blaze.png)</span>
 <div class="separator"></div>
 
 ### Extended Library
-The extended library uses colors also derived form the primary Amazon palette along with some other colors prominently featured throughout Amazon services. Color derivatives should be used where appropriate and work well for things button highlights, mouseover and color transitions.
+The extended library colors are derived from the primary palette. Color derivatives should be used where appropriate and work well for button highlights, mouseover and color transitions.
 
 <span class="inline-div">
-    <span class="title">Amazon Orange</span>
-    <span class="inline-img">![Amazon Orange]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/el_amazon_orange.png)</span>
+    <span class="title">Orange</span>
+    <span class="inline-img">![Orange]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/el_amazon_orange.png)</span>
 </span>
 
 <span class="inline-div">
@@ -33,8 +33,8 @@ The extended library uses colors also derived form the primary Amazon palette al
 </span>
 
 <span class="inline-div">
-    <span class="title">Prime Blue</span>
-    <span class="inline-img">![Prime Blue]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/el_prime_blue.png)</span>
+    <span class="title">Blue</span>
+    <span class="inline-img">![Blue]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/el_prime_blue.png)</span>
 </span>
 
 <span class="inline-div">
@@ -43,8 +43,8 @@ The extended library uses colors also derived form the primary Amazon palette al
 </span>
 
 <span class="inline-div">
-    <span class="title">AWS Purple & Blue</span>
-    <span class="inline-img">![AWS Purple & Blue]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/el_purple_blue.png)</span>
+    <span class="title">Purple & Blue</span>
+    <span class="inline-img">![Purple & Blue]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/el_purple_blue.png)</span>
 </span>
 </div>
 
@@ -52,7 +52,7 @@ The extended library uses colors also derived form the primary Amazon palette al
 ## Typography
 
 ### Primary Typefaces
-AWS websites primarily deploy the Amazon Ember typeface with some support from standard Helvetica Neue. In general, all typographical treatments should be limited within these options to maintain consistency across services.  On some smaller treatments, Helvetica may be more appropriate then Ember for visual acuity and readbility and when operating system and browser compatibility are a deep concern.
+AWS Amplify components primarily deploy the Amazon Ember typeface with some support from standard Helvetica Neue. In general, all typographical treatments should be limited within these options to maintain consistency across user interface.  On some smaller treatments, Helvetica may be more appropriate then Ember for visual acuity and readbility and when operating system and browser compatibility are a deep concern.
 
 <span class="title">Font Family</span>
 <span class="inline-img">![Amazon Ember Bold]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/ember_bold.png)</span>
@@ -62,7 +62,7 @@ AWS websites primarily deploy the Amazon Ember typeface with some support from s
 <div class="separator"></div>
 
 ### Type Sizing
-The selection below demonstrates primary typographic treatments derived from  AWS websites. In general typographic treatment and heirarchy should follow the lead below for how to display headers and body type. The proposed font catalogue below is limited to just 5 options to reduce page load and enforce patterns. Please note a heading 3 was not identified in any of the web services. 
+In general typographic treatment and heirarchy should follow the lead below for how to display headers and body type. The proposed font catalogue below is limited to just 5 options to reduce page load and enforce patterns. 
 
 <div class="font-example-div">
 <span class="title">HEADING 1</span>
@@ -238,7 +238,7 @@ Notifications & helpers are offered in a few main styles. Notifications should b
 ## AWS Components
 
 ### User Authentication
-The authentication component utilizes the styles outlined in the styleguide to provide a minimal, yet lightly AWS-branded experience out of the box.
+The authentication component utilizes the styles outlined in the styleguide to provide a minimal styled experience out of the box.
 
 <span class="inline-div">
     <span class="title">New User Account</span>
