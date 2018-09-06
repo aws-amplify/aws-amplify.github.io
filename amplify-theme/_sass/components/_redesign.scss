@@ -1831,8 +1831,18 @@ li {
     display: inline-block;
     position: relative;
     left: 15px;
-    bottom: 30px;
+    max-width: 1180px;
     font-family: "Amazon Ember", "Helvetica", sans-serif;
+
+    @media (min-width: 829px) {
+        bottom: 30px;
+        width: calc(100% - 30px);
+    }
+    @media (max-width: 828px) {
+        top: 15px;
+        left: calc(2.5% + 15px);
+        width: calc(95% - 30px);
+    }
 }
 
 .video {

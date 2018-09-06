@@ -13,32 +13,30 @@
 				<div class="container">
 					<div class="row">
 	
-						<div>
-							<div class="dev-guide-heading">
-								<div class="row">
-									{% for item in page.marketing_grid %}
-										<div class="col-sm-8 col-lg-8">
-											<span>
-												<div class="dev-guide-content" data-mh>
-													<p class="dev-guide__title">{{ item.title }}</p>
-													<!-- <p class="dev-guide__excerpt">{{ item.excerpt }}</p> -->
-												</div><!-- /.nav-grid__content -->
-											</span><!-- /.nav-grid__item -->
-										</div><!-- /.col -->
-                                    {% endfor %}
-                                    <p class="from-awsmobile callout callout--action">Welcome to AWS Amplify, the new way to build mobile and web apps.</p>
-								</div><!-- /.row -->
-								<div>
-                                    <!-- <a href="cli_guide"> <button class="btn install-amplify-cli" >Install Amplify CLI</button> </a> -->
-                                    <!-- <a href="toolchain">
-                                        <div id="learn-more-about-cli-box">
-                                            <p class="amplify-link">Learn more about the CLI</p>
-                                            <img class="down-arrow" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/icons/Small/More-Button-no-shadow.svg" />
-                                        </div>
-                                    </a> -->
-								</div>
-							</div><!-- /.nav-grid -->
-						</div><!-- /.col -->
+                        <div class="dev-guide-heading">
+                            <div class="row">
+                                {% for item in page.marketing_grid %}
+                                    <div class="col-sm-8 col-lg-8">
+                                        <span>
+                                            <div class="dev-guide-content" data-mh>
+                                                <p class="dev-guide__title">{{ item.title }}</p>
+                                                <!-- <p class="dev-guide__excerpt">{{ item.excerpt }}</p> -->
+                                            </div><!-- /.nav-grid__content -->
+                                        </span><!-- /.nav-grid__item -->
+                                    </div><!-- /.col -->
+                                {% endfor %}
+                                <p class="from-awsmobile callout callout--action">Welcome to AWS Amplify, a powerful set of tools, libraries, and UI components designed for mobile and web app developers. Build sophisticated, cloud-powered apps on a flexible, scalable, and reliable serverless backend. Get started in just three steps.</p>
+                            </div><!-- /.row -->
+                            <div>
+                                <!-- <a href="cli_guide"> <button class="btn install-amplify-cli" >Install Amplify CLI</button> </a> -->
+                                <!-- <a href="toolchain">
+                                    <div id="learn-more-about-cli-box">
+                                        <p class="amplify-link">Learn more about the CLI</p>
+                                        <img class="down-arrow" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/icons/Small/More-Button-no-shadow.svg" />
+                                    </div>
+                                </a> -->
+                            </div>
+                        </div><!-- /.nav-grid -->
 					</div><!-- /.row -->
 				</div><!-- /.container -->
             </div><!-- /.section -->
