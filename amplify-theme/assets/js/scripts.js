@@ -1,86 +1,135 @@
 ( function( $ ) {
 	'use strict';
 
-(function(document, history, location) {
+	let setScroll = function(document, history, location, offset_height_px) {
 
-	var HISTORY_SUPPORT = !!(history && history.pushState);
-  
-	var anchorScrolls = {
-	  ANCHOR_REGEX: /^#[^ ]+$/,
-	  OFFSET_HEIGHT_PX: 70,
-  
-	  /**
-	   * Establish events, and fix initial scroll position if a hash is provided.
-	   */
-	  init: function() {
-		this.scrollToCurrent();
-		window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
-		document.body.addEventListener('click', this.delegateAnchors.bind(this));
-	  },
-  
-	  /**
-	   * Return the offset amount to deduct from the normal scroll position.
-	   * Modify as appropriate to allow for dynamic calculations
-	   */
-	  getFixedOffset: function() {
-		return this.OFFSET_HEIGHT_PX;
-	  },
-  
-	  /**
-	   * If the provided href is an anchor which resolves to an element on the
-	   * page, scroll to it.
-	   * @param  {String} href
-	   * @return {Boolean} - Was the href an anchor.
-	   */
-	  scrollIfAnchor: function(href, pushToHistory) {
-		var match, rect, anchorOffset;
-  
-		if(!this.ANCHOR_REGEX.test(href)) {
-		  return false;
-		}
-  
-		match = document.getElementById(href.slice(1));
-  
-		if(match) {
-		  rect = match.getBoundingClientRect();
-		  anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
-		  window.scrollTo(window.pageXOffset, anchorOffset);
-  
-		  // Add the state to history as-per normal anchor links
-		  if(HISTORY_SUPPORT && pushToHistory) {
-			history.pushState({}, document.title, location.pathname + href);
+		var HISTORY_SUPPORT = !!(history && history.pushState);
+	  
+		var anchorScrolls = {
+		  ANCHOR_REGEX: /^#[^ ]+$/,
+		  OFFSET_HEIGHT_PX: offset_height_px,
+	  
+		  /**
+		   * Establish events, and fix initial scroll position if a hash is provided.
+		   */
+		  init: function() {
+			this.scrollToCurrent();
+			window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
+			document.body.addEventListener('click', this.delegateAnchors.bind(this));
+		  },
+	  
+		  /**
+		   * Return the offset amount to deduct from the normal scroll position.
+		   * Modify as appropriate to allow for dynamic calculations
+		   */
+		  getFixedOffset: function() {
+			return this.OFFSET_HEIGHT_PX;
+		  },
+	  
+		  /**
+		   * If the provided href is an anchor which resolves to an element on the
+		   * page, scroll to it.
+		   * @param  {String} href
+		   * @return {Boolean} - Was the href an anchor.
+		   */
+		  scrollIfAnchor: function(href, pushToHistory) {
+			var match, rect, anchorOffset;
+	  
+			if(!this.ANCHOR_REGEX.test(href)) {
+			  return false;
+			}
+	  
+			match = document.getElementById(href.slice(1));
+	  
+			if(match) {
+			  rect = match.getBoundingClientRect();
+			  anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
+			  window.scrollTo(window.pageXOffset, anchorOffset);
+	  
+			  // Add the state to history as-per normal anchor links
+			  if(HISTORY_SUPPORT && pushToHistory) {
+				history.pushState({}, document.title, location.pathname + href);
+			  }
+			}
+	  
+			return !!match;
+		  },
+	  
+		  /**
+		   * Attempt to scroll to the current location's hash.
+		   */
+		  scrollToCurrent: function() {
+			this.scrollIfAnchor(window.location.hash);
+		  },
+	  
+		  /**
+		   * If the click event's target was an anchor, fix the scroll position.
+		   */
+		  delegateAnchors: function(e) {
+			var elem = e.target;
+	  
+			if(
+			  elem.nodeName === 'A' &&
+			  this.scrollIfAnchor(elem.getAttribute('href'), true)
+			) {
+			  e.preventDefault();
+			}
 		  }
+		};
+	  
+		window.addEventListener(
+		  'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
+		);
+	}
+	
+	setScroll(window.document, window.history, window.location, 70);
+
+	let smoothScrollOffset = 85;
+
+	//Handle click for notification bar
+	$( 	'div.notification-bar .close-button' )
+		.click( function( event ) {
+			Cookies.set('notificationMessage_LastReceived', new String( new Date() ) );
+			Cookies.set('notificationStatus', 'none');
+			$( 'div.notification-bar' ).hide();
+			smoothScrollOffset = 85;
+			setScroll(window.document, window.history, window.location, 70);
+
+			if ( this.className == 'link-button' ) {
+				// go to link
+			} else {
+				return false;
+			}
+			
 		}
-  
-		return !!match;
-	  },
-  
-	  /**
-	   * Attempt to scroll to the current location's hash.
-	   */
-	  scrollToCurrent: function() {
-		this.scrollIfAnchor(window.location.hash);
-	  },
-  
-	  /**
-	   * If the click event's target was an anchor, fix the scroll position.
-	   */
-	  delegateAnchors: function(e) {
-		var elem = e.target;
-  
-		if(
-		  elem.nodeName === 'A' &&
-		  this.scrollIfAnchor(elem.getAttribute('href'), true)
-		) {
-		  e.preventDefault();
-		}
-	  }
-	};
-  
-	window.addEventListener(
-	  'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
 	);
-  })(window.document, window.history, window.location);
+
+
+	var showNotificationBar = function ( messageDate ) {
+
+		var lastMessageReceived;
+		
+		if (Cookies.get('notificationMessage_LastReceived')) {
+			lastMessageReceived = new Date( Cookies.get('notificationMessage_LastReceived'));
+		} else {
+			lastMessageReceived = new Date('January 1, 2017 12:00:00') ;
+		} 
+		
+		// new message reveived
+		if ( messageDate.getTime() > lastMessageReceived.getTime() ){
+			//console.log(messageDate.getTime(), lastMessageReceived.getTime());
+			$( 'div.notification-bar' ).show();
+			setScroll(window.document, window.history, window.location, 135);
+			smoothScrollOffset = 130;
+			Cookies.set('notificationStatus', 'received');
+		} else {
+			// do nothing
+		}
+
+	}
+
+	// When the last message is received. Typicaly the announcement time
+	showNotificationBar( new Date('August 27, 2018 9:00:00') );
 
   	// get UR parameters
 	$.urlParam = function(name){
@@ -255,7 +304,7 @@
 
 	$jsSmoothScroll.click( function() {
 		$( 'html, body' ).animate( {
-			scrollTop: $( $( this ).attr( 'href' ) ).offset().top - 85
+			scrollTop: $( $( this ).attr( 'href' ) ).offset().top - smoothScrollOffset
 		}, 500 );
 
 		return false;
@@ -334,45 +383,7 @@
 		}
 	}
 
-	//Handle click for notification bar
-	$( 	'div.notification-bar .close-button' )
-		.click( function( event ) {
-			Cookies.set('notificationMessage_LastReceived', new String( new Date() ) );
-			Cookies.set('notificationStatus', 'none');
-			$( 'div.notification-bar' ).hide();
 
-			if ( this.className == 'link-button' ) {
-				// go to link
-			} else {
-				return false;
-			}
-			
-		}
-	);
-
-	var showNotificationBar = function ( messageDate ) {
-
-		var lastMessageReceived;
-		
-		if (Cookies.get('notificationMessage_LastReceived')) {
-			lastMessageReceived = new Date( Cookies.get('notificationMessage_LastReceived'));
-		} else {
-			lastMessageReceived = new Date('January 1, 2017 12:00:00') ;
-		} 
-		
-		// new message reveived
-		if ( messageDate.getTime() > lastMessageReceived.getTime() ){
-			//console.log(messageDate.getTime(), lastMessageReceived.getTime());
-			$( 'div.notification-bar' ).show();
-			Cookies.set('notificationStatus', 'received');
-		} else {
-			// do nothing
-		}
-
-	}
-
-	// When the last message is received. Typicaly the announcement time
-	showNotificationBar( new Date('August 27, 2018 9:00:00') );
 
 	// Hide magnifying glass in search bar
 	// var hideSearchIcon = function() {
