@@ -120,7 +120,17 @@
 			//console.log(messageDate.getTime(), lastMessageReceived.getTime());
 			$( 'div.notification-bar' ).show();
 			setScroll(window.document, window.history, window.location, 135);
-			smoothScrollOffset = 130;
+			if (!window.location.href.includes("ui_library")) {
+				smoothScrollOffset = 130;
+			} else {
+				smoothScrollOffset = 110;
+			}
+			if (document.getElementsByClassName("styleguide-affix")[0]) {
+				document.getElementsByClassName("styleguide-affix")[0].classList.add("styleguide-affix-notif");
+			}
+			if (document.getElementsByClassName("sections-list-notif-check")[0]) {
+				document.getElementsByClassName("sections-list-notif-check")[0].classList.add("sections-list-notif");
+			}
 			Cookies.set('notificationStatus', 'received');
 		} else {
 			// do nothing
