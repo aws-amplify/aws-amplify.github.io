@@ -86,6 +86,14 @@ cloud_grid_right:
         url: '/images/Logos/Web-Small-Grey.png'
       - title: React
         url: '/images/Logos/React-Small-Grey.png'
+  - title: XR
+    excerpt: Work with augmented reality (AR) and virtual reality (VR) content within your applications.
+    url: '/media/xr_guide' 
+    platforms:
+      - title: Web
+        url: '/images/Logos/Web-Small-Grey.png'
+      - title: React
+        url: '/images/Logos/React-Small-Grey.png'
 
 utilities:
   - title: Cache
