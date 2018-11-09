@@ -59,7 +59,7 @@ future: true
 # Amplify theme settings
 amplify:
     baseurl: # Since the site is deployed under https://aws-amplify.github.io
-    docs_baseurl: /amplify-js
+    docs_baseurl: /docs
     color_theme:  # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
@@ -68,7 +68,7 @@ amplify:
             platform: for JavaScript
         nav:
             - item_name: Get Started
-              item_url: '/media/get_started'
+              item_external_url: 'https://aws-amplify.github.io/docs'
               id: get_started
             - item_name: Toolchain
               item_url: '/media/toolchain'
