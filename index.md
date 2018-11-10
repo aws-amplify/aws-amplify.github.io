@@ -9,7 +9,7 @@ title: The foundation for your cloud-powered mobile & web apps
 buttons:
     - content: Get Started
       icon: arrow-right
-      url: '/media/get_started'
+      url: '/docs'
       external_url: false
 
 # Grid navigation
@@ -25,12 +25,12 @@ marketing_grid:
     - title: <span class="orange-text">Beautiful</span> UI Components
       icon: '/images/icons/Medium/UI-Components.png'
       excerpt: Accelerate app development by leveraging our beautiful out-of-the box UI components.
-      url: '/media/ui_library'
+      url: '/docs/js/ui'
 
 cloud_grid_left:
   - title: Analytics
     excerpt: Drop-in analytics to track user sessions, custom user attributes, and in-app metrics.
-    url: '/media/analytics_guide'
+    url: '/docs/js/analytics'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -38,7 +38,7 @@ cloud_grid_left:
         url: '/images/Logos/React-Small-Grey.png'
   - title: API 
     excerpt: A simple and secure solution for making HTTP requests using REST and GraphQL, with support for real-time data.
-    url: '/media/api_guide' 
+    url: '/docs/js/api' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -46,7 +46,7 @@ cloud_grid_left:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Authentication
     excerpt: Authentication APIs with pre-built UI components for your app.
-    url: '/media/authentication_guide'
+    url: '/docs/js/authentication'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -54,7 +54,7 @@ cloud_grid_left:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Storage
     excerpt: A simple mechanism for managing user content in public, protected or private storage.
-    url: '/media/storage_guide' 
+    url: '/docs/js/storage' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -64,7 +64,7 @@ cloud_grid_left:
 cloud_grid_right:
   - title: Interactions
     excerpt: Create conversational bots powered by deep learning technologies.
-    url: '/media/interactions_guide'   
+    url: '/docs/js/interactions'   
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -72,7 +72,7 @@ cloud_grid_right:
         url: '/images/Logos/React-Small-Grey.png'
   - title: PubSub
     excerpt: Connect your app to message-oriented middleware on the cloud.
-    url: '/media/pub_sub_guide'   
+    url: '/docs/js/pubsub'   
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -80,7 +80,7 @@ cloud_grid_right:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Notifications
     excerpt: Push notifications with campaign analytics and targeting.
-    url: '/media/push_notifications_setup'  
+    url: '/docs/js/push-notifications'  
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -88,7 +88,7 @@ cloud_grid_right:
         url: '/images/Logos/React-Small-Grey.png'
   - title: XR
     excerpt: Work with augmented reality (AR) and virtual reality (VR) content within your applications.
-    url: '/media/xr_guide' 
+    url: '/docs/js/xr' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -98,7 +98,7 @@ cloud_grid_right:
 utilities:
   - title: Cache
     excerpt: A generic LRU cache for storing data with priority and expiration settings.
-    url: '/media/cache_guide'  
+    url: '/docs/js/cache'  
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -106,7 +106,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Hub
     excerpt: Drop-in analytics to track user sessions, custom user attributes, and in-app metrics.
-    url: '/media/hub_guide'
+    url: '/docs/js/hub'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -114,7 +114,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: I18n
     excerpt: A lightweight internationalization solution.
-    url: '/media/i18n_guide' 
+    url: '/docs/js/i18n' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -122,7 +122,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Logger
     excerpt: Console logging utility.
-    url: '/media/logger_guide' 
+    url: '/docs/js/logger' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -130,7 +130,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Service Worker
     excerpt: A utility class to work with PWA and Service Worker APIs.
-    url: '/media/service_workers_guide'
+    url: '/docs/js/service-workers'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -142,13 +142,13 @@ grid_navigation:
     - title: Installation
       excerpt:  Install and configurate AWS Amplify to start working with cloud services.
       cta: Read more
-      url: '/media/install_n_config'
+      url: '/docs/js/start'
     - title: Developer Guide
       excerpt: Discover our building blocks for frontend and mobile developers.
       cta: Read more
-      url: '/media/developer_guide'
+      url: '/docs'
     - title: API Reference
       excerpt: API Reference for the library.
       cta: Read more
-      url: '/api/'      
+      url: '/amplify-js/api'      
 ---
