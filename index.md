@@ -30,7 +30,7 @@ marketing_grid:
 cloud_grid_left:
   - title: Analytics
     excerpt: Drop-in analytics to track user sessions, custom user attributes, and in-app metrics.
-    url: '/docs/js/analytics'
+    url: '/js/analytics'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -38,7 +38,7 @@ cloud_grid_left:
         url: '/images/Logos/React-Small-Grey.png'
   - title: API 
     excerpt: A simple and secure solution for making HTTP requests using REST and GraphQL, with support for real-time data.
-    url: '/docs/js/api' 
+    url: '/js/api' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -46,7 +46,7 @@ cloud_grid_left:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Authentication
     excerpt: Authentication APIs with pre-built UI components for your app.
-    url: '/docs/js/authentication'
+    url: '/js/authentication'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -54,7 +54,7 @@ cloud_grid_left:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Storage
     excerpt: A simple mechanism for managing user content in public, protected or private storage.
-    url: '/docs/js/storage' 
+    url: '/js/storage' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -64,7 +64,7 @@ cloud_grid_left:
 cloud_grid_right:
   - title: Interactions
     excerpt: Create conversational bots powered by deep learning technologies.
-    url: '/docs/js/interactions'   
+    url: '/js/interactions'   
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -72,7 +72,7 @@ cloud_grid_right:
         url: '/images/Logos/React-Small-Grey.png'
   - title: PubSub
     excerpt: Connect your app to message-oriented middleware on the cloud.
-    url: '/docs/js/pubsub'   
+    url: '/js/pubsub'   
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -80,7 +80,7 @@ cloud_grid_right:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Notifications
     excerpt: Push notifications with campaign analytics and targeting.
-    url: '/docs/js/push-notifications'  
+    url: '/js/push-notifications'  
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -88,7 +88,7 @@ cloud_grid_right:
         url: '/images/Logos/React-Small-Grey.png'
   - title: XR
     excerpt: Work with augmented reality (AR) and virtual reality (VR) content within your applications.
-    url: '/docs/js/xr' 
+    url: '/js/xr' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -98,7 +98,7 @@ cloud_grid_right:
 utilities:
   - title: Cache
     excerpt: A generic LRU cache for storing data with priority and expiration settings.
-    url: '/docs/js/cache'  
+    url: '/js/cache'  
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -106,7 +106,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Hub
     excerpt: Drop-in analytics to track user sessions, custom user attributes, and in-app metrics.
-    url: '/docs/js/hub'
+    url: '/js/hub'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -114,7 +114,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: I18n
     excerpt: A lightweight internationalization solution.
-    url: '/docs/js/i18n' 
+    url: '/js/i18n' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -122,7 +122,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Logger
     excerpt: Console logging utility.
-    url: '/docs/js/logger' 
+    url: '/js/logger' 
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
@@ -130,7 +130,7 @@ utilities:
         url: '/images/Logos/React-Small-Grey.png'
   - title: Service Worker
     excerpt: A utility class to work with PWA and Service Worker APIs.
-    url: '/docs/js/service-workers'
+    url: '/js/service-workers'
     platforms:
       - title: Web
         url: '/images/Logos/Web-Small-Grey.png'
