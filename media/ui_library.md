@@ -6,7 +6,7 @@ layout: ui_library
 ## Colors
 
 ### UI Colors
-<span class="excerpt">UI Colors for AWS amplify are derived from a primary and secondary color palette. Most primary actions are wrapped in Orange. Dark backgrounds and darker treatments will typically receive the Squid Ink color treatment.</span>
+<span class="excerpt">UI Colors for the Amplify Framework are derived from a primary and secondary color palette. Most primary actions are wrapped in Orange. Dark backgrounds and darker treatments will typically receive the Squid Ink color treatment.</span>
 
 <span class="title">Primary Colors</span>
 <span class="inline-img">![Orange]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/pc_amazon_orange.png)</span>
@@ -52,7 +52,7 @@ The extended library colors are derived from the primary palette. Color derivati
 ## Typography
 
 ### Primary Typefaces
-AWS Amplify components primarily deploy the Amazon Ember typeface with some support from standard Helvetica Neue. In general, all typographical treatments should be limited within these options to maintain consistency across user interface.  On some smaller treatments, Helvetica may be more appropriate then Ember for visual acuity and readbility and when operating system and browser compatibility are a deep concern.
+Amplify Framework components primarily deploy the Amazon Ember typeface with some support from standard Helvetica Neue. In general, all typographical treatments should be limited within these options to maintain consistency across user interface.  On some smaller treatments, Helvetica may be more appropriate then Ember for visual acuity and readbility and when operating system and browser compatibility are a deep concern.
 
 <span class="title">Font Family</span>
 <span class="inline-img">![Amazon Ember Bold]({%if jekyll.environment == 'production'%}{{site.amplify.baseurl}}{%endif%}/images/Style_Guide/ember_bold.png)</span>

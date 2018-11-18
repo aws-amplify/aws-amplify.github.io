@@ -140,7 +140,7 @@ utilities:
 # Grid navigation
 grid_navigation:
     - title: Installation
-      excerpt:  Install and configurate AWS Amplify to start working with cloud services.
+      excerpt:  Install and configure the Amplify Framework to start working with cloud services.
       cta: Read more
       url: '/docs/js/start'
     - title: Developer Guide

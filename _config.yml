@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: AWS Amplify Developer Documentation
+title: Amplify Framework Developer Documentation
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -63,7 +63,7 @@ amplify:
     color_theme:  # Available themes: blue (default), green, purple, red and yellow
     header:
         logo:
-            text: AWS Amplify
+            text: Amplify Framework
             image: true
             platform: for JavaScript
         nav:
@@ -82,7 +82,7 @@ amplify:
     footer:
         content:
             logo:
-                text: AWS Amplify is supported by Amazon Web Services
+                text: Amplify Framework is supported by Amazon Web Services
                 image: true
             copyright: © 2018, Amazon Web Services, Inc. or its affiliates. All rights reserved.
         social_list:
@@ -254,7 +254,7 @@ category_list:
               - title: Amazon CloudFront
                 url: https://aws.amazon.com/cloudfront/
         - title: VS Code Extension 
-          excerpt: Code snippets for AWS Amplify in Visual Studio Code.
+          excerpt: Code snippets for Amplify Framework in Visual Studio Code.
           cta: Read more
           class: aws-icon-ps-60-network-nodes
           url_external: 'https://marketplace.visualstudio.com/items?itemName=aws-amplify.aws-amplify-vscode'   
