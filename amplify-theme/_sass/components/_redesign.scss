@@ -112,9 +112,9 @@
     }
 
     @media (max-width: 828px) {
-        display: block;
-        width: 208px;
-        margin: auto;
+        display: flex;
+        width: 64px;
+        margin: 0 auto;
     }
 }
 
@@ -160,7 +160,7 @@
         margin-top: 2px;
 
         @media (max-width: 828px) {
-            margin-top: 1px;
+            display: none;
         }
     }
 
