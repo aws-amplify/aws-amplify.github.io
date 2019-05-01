@@ -42,7 +42,7 @@
 {% endif %}
 
 {% if site.amplify.header.logo.text or site.amplify.header.logo.image or site.amplify.header.nav %}
-	<header class="site-header">
+	<header class="site-header" style='padding-top: 5px;'>
 		<div class="container site-header-container">
 			<div class="row">
 				<div class="visible-xs toggle-button-container" id="toggle-button-container">
@@ -102,6 +102,12 @@
 									<a href="https://aws-amplify.github.io/amplify-js/api/" target="_blank"><p>React Native</p></a>
 								</div>
 							</div>
+						</li>
+						<li>
+								<a href="https://amplify.aws/community/" target='_blank'>
+										Community
+										<img width='10px' height="10px" style='opacity: .5;' class="external-link-icon" id="external-link-image" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/icons/external-link.png">
+									</a>
 						</li>
 						<li class="site-search" id="search-input-box">
 							<input placeholder="Search" type="text" id="search-input"><img class="search-image" id="search-image" src="{% if jekyll.environment == 'production' %}{{ site.amplify.baseurl }}{% endif %}/images/layout/Search.svg"></input>
