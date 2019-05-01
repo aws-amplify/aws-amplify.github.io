@@ -70,9 +70,6 @@ amplify:
             - item_name: Get Started
               item_external_url: 'https://aws-amplify.github.io/docs'
               id: get_started
-            - item_name: Toolchain
-              item_url: '/media/toolchain'
-              id: toolchain
             - item_name: Style Guide
               item_url: '/media/ui_library'
               id: ui_library
