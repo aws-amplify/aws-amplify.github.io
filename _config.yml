@@ -310,3 +310,5 @@ js_libraries:
     url: '?platform=ionic'
   - title: JavaScript
     url: '?platform=purejs'
+
+theme: jekyll-theme-cayman
