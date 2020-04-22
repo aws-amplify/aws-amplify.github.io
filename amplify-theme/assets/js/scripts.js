@@ -1,14 +1,115 @@
 ( function( $ ) {
 	'use strict';
+	/*
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+			});
+		});
+	}
+	*/
 
 (function(document, history, location) {
+	(function() {
+		var redirectsDictionary = {
+			// landing page
+			"/": "https://docs.amplify.aws/",
+			// Docs - JS
+			"/js/start?platform=purejs": "https://docs.amplify.aws/start",
+			"/js/start": "https://docs.amplify.aws/start",
+			"/js/react": "https://docs.amplify.aws/start?integration=react",
+			"/js/angular": "https://docs.amplify.aws/start?integration=angular",
+			"/js/vue": "https://docs.amplify.aws/start?integration=vue",
+			"/cli-toolchain/quickstart": "https://docs.amplify.aws/cli",
+			"/cli-toolchain/usage": "https://docs.amplify.aws/cli/usage/headless",
+			"/cli-toolchain/graphql": "https://docs.amplify.aws/cli/graphql-transformer/overview",
+			"/cli-toolchain/plugins": "https://docs.amplify.aws/cli/usage/plugin",
+			"/cli/init": "https://docs.amplify.aws/cli",
+			"/js/analytics": "https://docs.amplify.aws/lib/analytics/getting-started?platform=js",
+			"/js/api": "https://docs.amplify.aws/lib/graphqlapi/getting-started?platform=js",
+			"/js/xr": "https://docs.amplify.aws/lib/xr/getting-started?platform=js",
+			"/js/authentication": "https://docs.amplify.aws/lib/auth/getting-started?platform=js",
+			"/js/datastore": "https://docs.amplify.aws/lib/datastore/getting-started?platform=js",
+			"/js/interactions": "https://docs.amplify.aws/lib/interactions/getting-started?platform=js",
+			"/js/predictions": "https://docs.amplify.aws/lib/predictions/getting-started?platform=js",
+			"/js/pubsub": "https://docs.amplify.aws/lib/pubsub/getting-started?platform=js",
+			"/js/push-notifications": "https://docs.amplify.aws/lib/push-notifications/getting-started?platform=js",
+			"/js/storage": "https://docs.amplify.aws/lib/storage/getting-started?platform=js",
+			"/js/cache": "https://docs.amplify.aws/lib/utilities/cache?platform=js",
+			"/js/hub": "https://docs.amplify.aws/lib/utilities/hub?platform=js",
+			"/js/i18n": "https://docs.amplify.aws/lib/utilities/i18n?platform=js",
+			"/js/logger": "https://docs.amplify.aws/lib/utilities/logger?platform=js",
+			"/js/service-workers": "https://docs.amplify.aws/lib/utilities/serviceworker?platform=js",
+			// Docs - iOS SDK
+			"/sdk/ios/start": "https://docs.amplify.aws/start?integration=ios",
+			"/sdk/ios/api": "https://docs.amplify.aws/sdk/api/graphql?platform=ios",
+			"/sdk/ios/authentication": "https://docs.amplify.aws/sdk/auth/how-it-works?platform=ios",
+			"/sdk/ios/pubsub": "https://docs.amplify.aws/sdk/pubsub/getting-started?platform=ios",
+			"/sdk/ios/push-notifications": "https://docs.amplify.aws/sdk/push-notifications/getting-started?platform=ios",
+			"/sdk/ios/storage": "https://docs.amplify.aws/sdk/storage/getting-started?platform=ios",
+			// Docs - iOS Amplify
+			"/ios/start": "https://docs.amplify.aws/start?integration=ios",
+			"/ios/api": "https://docs.amplify.aws/lib/graphqlapi/getting-started?platform=ios",
+			"/ios/storage": "https://docs.amplify.aws/lib/storage/getting-started?platform=ios",
+			"/ios/authentication": "https://docs.amplify.aws/lib/auth/getting-started?platform=ios",
+			"/ios/analytics": "https://docs.amplify.aws/lib/analytics/getting-started?platform=ios",
+			"/ios/datastore": "https://docs.amplify.aws/lib/datastore/getting-started?platform=ios",
+			"/ios/predictions": "https://docs.amplify.aws/lib/predictions/getting-started?platform=ios",
+			// Docs - Android SDK
+			"/sdk/android/start": "https://docs.amplify.aws/start?integration=android",
+			"/sdk/android/api": "https://docs.amplify.aws/sdk/api/graphql?platform=android",
+			"/sdk/android/storage": "https://docs.amplify.aws/sdk/storage/getting-started?platform=android",
+			"/sdk/android/authentication": "https://docs.amplify.aws/sdk/auth/how-it-works?platform=android",
+			"/sdk/android/analytics": "https://docs.amplify.aws/sdk/analytics/getting-started?platform=android",
+			"/sdk/android/push-notifications": "https://docs.amplify.aws/sdk/push-notifications/getting-started?platform=android",
+			"/sdk/android/pubsub": "https://docs.amplify.aws/sdk/pubsub/getting-started?platform=android",
+		};
+
+		var pathname = location.pathname;
+		var hash = location.hash;
+		var completePath = pathname + hash;
+
+		var redirectTo = redirectsDictionary[completePath];
+		if (redirectTo) {
+			location.replace(redirectTo);
+		}
+	})()
+	
+	$(function(){
+	    $("a").click(function(e) {
+		$.urlParam = function (name) {
+		    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+				      .exec(window.location.href);
+		    if (results == null) {
+			 return 0;
+		    }
+		    return results[1] || 0;
+		}
+
+		var subpath = $(this).attr('href');
+		if(subpath === '/cli/migrate' || subpath === '/docs/cli/migrate' ||
+			subpath === '/cli/lambda-node-version-update' || 
+			subpath === '/docs/cli/lambda-node-version-update' ) {
+			e.preventDefault();
+			var baseURL = window.location.protocol + "//" + window.location.host + subpath;
+			var queryParms = '?sdk=' + $.urlParam('sdk');
+			var finalPath = baseURL + queryParms;
+			window.location = finalPath;
+		}
+	    });
+	});
 
 	var HISTORY_SUPPORT = !!(history && history.pushState);
-  
+
 	var anchorScrolls = {
 	  ANCHOR_REGEX: /^#[^ ]+$/,
 	  OFFSET_HEIGHT_PX: 70,
-  
+
 	  /**
 	   * Establish events, and fix initial scroll position if a hash is provided.
 	   */
@@ -17,7 +118,7 @@
 		window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
 		document.body.addEventListener('click', this.delegateAnchors.bind(this));
 	  },
-  
+
 	  /**
 	   * Return the offset amount to deduct from the normal scroll position.
 	   * Modify as appropriate to allow for dynamic calculations
@@ -25,7 +126,7 @@
 	  getFixedOffset: function() {
 		return this.OFFSET_HEIGHT_PX;
 	  },
-  
+
 	  /**
 	   * If the provided href is an anchor which resolves to an element on the
 	   * page, scroll to it.
@@ -34,40 +135,40 @@
 	   */
 	  scrollIfAnchor: function(href, pushToHistory) {
 		var match, rect, anchorOffset;
-  
+
 		if(!this.ANCHOR_REGEX.test(href)) {
 		  return false;
 		}
-  
+
 		match = document.getElementById(href.slice(1));
-  
+
 		if(match) {
 		  rect = match.getBoundingClientRect();
 		  anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
 		  window.scrollTo(window.pageXOffset, anchorOffset);
-  
+
 		  // Add the state to history as-per normal anchor links
 		  if(HISTORY_SUPPORT && pushToHistory) {
 			history.pushState({}, document.title, location.pathname + href);
 		  }
 		}
-  
+
 		return !!match;
 	  },
-  
+
 	  /**
 	   * Attempt to scroll to the current location's hash.
 	   */
 	  scrollToCurrent: function() {
 		this.scrollIfAnchor(window.location.hash);
 	  },
-  
+
 	  /**
 	   * If the click event's target was an anchor, fix the scroll position.
 	   */
 	  delegateAnchors: function(e) {
 		var elem = e.target;
-  
+
 		if(
 		  elem.nodeName === 'A' &&
 		  this.scrollIfAnchor(elem.getAttribute('href'), true)
@@ -76,7 +177,7 @@
 		}
 	  }
 	};
-  
+
 	window.addEventListener(
 	  'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
 	);
@@ -88,28 +189,9 @@
 
 		if ( results && results[ 1 ] )
 			return results[ 1 ];
-		else	
+		else
 			return 0;
 	};
-
-	if ( $.urlParam( 'fromawsmobile' )) {
-		//console.log($.urlParam( 'fromawsmobile' ))
-		if ( $.urlParam( 'fromawsmobile' ) == 'true') {
-			if ($('.from-awsmobile')) {
-				$('.from-awsmobile').show();
-			}
-		}
-		else {
-			if ($('.from-awsmobile')) {
-				$('.from-awsmobile').hide();
-			}
-		}
-	}
-	else {
-		if ($('.from-awsmobile')) {
-			$('.from-awsmobile').hide();
-		}
-	}
 
 	// Reduce
 	$.fn.reduce = function( fnReduce, initialValue ) {
@@ -296,7 +378,7 @@
 		var ref_url =  $.urlParam( 'ref_url' );
 		var ref_content =  unescape($.urlParam( 'ref_content' ));
 		var ref_content_section =  $.urlParam( 'ref_content_section' );
-		 
+
 		if (ref_url && ref_content) {
 			$('.installation_default_next_step').hide();
 			$('.installation_custom_next_step').html ("Continue following the <a href='" + ref_url + "#" + ref_content_section +"'>" + ref_content + "</a> from where you left off.");
@@ -326,7 +408,7 @@
 
 	});
 
-	// Open tabs when the page is launched with the query params 
+	// Open tabs when the page is launched with the query params
 	if ( $.urlParam( 'platform' )) {
 		var platform = $.urlParam('platform');
 		if (platform) {
@@ -335,35 +417,33 @@
 	}
 
 	//Handle click for notification bar
-	$( 	'div.notification-bar .close-button' )
+	$( 	'div.row.notification-bar a' )
 		.click( function( event ) {
 			Cookies.set('notificationMessage_LastReceived', new String( new Date() ) );
 			Cookies.set('notificationStatus', 'none');
-			$( 'div.notification-bar' ).hide();
+			$( 'div.row.notification-bar' ).hide();
 
 			if ( this.className == 'link-button' ) {
 				// go to link
 			} else {
 				return false;
 			}
-			
 		}
 	);
 
 	var showNotificationBar = function ( messageDate ) {
 
 		var lastMessageReceived;
-		
+
 		if (Cookies.get('notificationMessage_LastReceived')) {
 			lastMessageReceived = new Date( Cookies.get('notificationMessage_LastReceived'));
 		} else {
 			lastMessageReceived = new Date('January 1, 2017 12:00:00') ;
-		} 
-		
+		}
+
 		// new message reveived
 		if ( messageDate.getTime() > lastMessageReceived.getTime() ){
-			//console.log(messageDate.getTime(), lastMessageReceived.getTime());
-			$( 'div.notification-bar' ).show();
+			$( 'div.row.notification-bar' ).show();
 			Cookies.set('notificationStatus', 'received');
 		} else {
 			// do nothing
@@ -372,28 +452,24 @@
 	}
 
 	// When the last message is received. Typicaly the announcement time
-	// showNotificationBar( new Date('August 27, 2018 9:00:00') );
+	showNotificationBar( new Date('August 1, 2018 11:42:00') );
 
 	// Hide magnifying glass in search bar
-	// var hideSearchIcon = function() {
-	// 	let search_box = document.getElementById("search-input")
-	// 	search_box.onclick = function() {
-	// 		document.getElementById("search-image").style.display = "none";
-	// 		search_box.style.outline = "none";
-	// 		search_box.placeholder = "Search";
-	// 		search_box.style.paddingLeft = "2px";
-	// 	}
-	// }
 
-	//hideSearchIcon();
-
-	// Hide notif bar
-	let close_notif = document.getElementById("close-notif");
-	if (close_notif){
-		close_notif.addEventListener("click", function() {
-			document.getElementById("notification-bar").style.display = "none";
-		});
+	var hideSearchIcon = function() {
+		let search_box = document.getElementById("search-input")
+		search_box.onclick = function() {
+			document.getElementById("search-image").style.display = "none";
+			search_box.style.outline = "none";
+			search_box.placeholder = "Search";
+			search_box.style.paddingLeft = "2px";
+		}
 	}
+
+	hideSearchIcon();
+
+	// temporary for editing notif bar
+	//document.getElementById("notification-bar").style.display = "block";
 
 	var addLineNumbers = function() {
 		var pre = document.getElementsByTagName('pre'), pl = pre.length;
@@ -447,7 +523,7 @@
 	if (offcanvas_toggle) offcanvas_toggle.addEventListener("click", moveOffCanvasToggle);
 	$('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1,maximum-scale=1');
 
-	/*let apiLink = function() {
+	let apiLink = function() {
 		let api_select = document.getElementById('api-select');
 		if (api_select.value != "default") {
 			window.open(api_select.value, '_blank');
@@ -471,7 +547,6 @@
 	}
 	let docs_select = document.getElementById('docs-select');
 	if (docs_select) docs_select.addEventListener("change", docsLink);
-	*/
 
 }( jQuery ) );
 
