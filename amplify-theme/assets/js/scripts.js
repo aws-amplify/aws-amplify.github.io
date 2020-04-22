@@ -2,6 +2,12 @@
 	'use strict';
 
 (function(document, history, location) {
+	
+	(function() {
+		if (location.pathname === "/") {
+			location.replace("https://docs.amplify.aws/");
+		}
+	})()
 
 	var HISTORY_SUPPORT = !!(history && history.pushState);
   
