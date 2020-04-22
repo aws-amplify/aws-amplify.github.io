@@ -2,6 +2,66 @@
 	'use strict';
 
 (function(document, history, location) {
+	(function() {
+		var redirectsDictionary = {
+			// landing page
+			"/docs/": "https://docs.amplify.aws/",
+			"/docs/js/start?platform=purejs": "https://docs.amplify.aws/start",
+			"/docs/js/start": "https://docs.amplify.aws/start",
+			"/docs/js/react": "https://docs.amplify.aws/start?integration=react",
+			"/docs/js/angular": "https://docs.amplify.aws/start?integration=angular",
+			"/docs/js/vue": "https://docs.amplify.aws/start?integration=vue",
+			"/docs/cli-toolchain/quickstart": "https://docs.amplify.aws/cli",
+			"/docs/cli-toolchain/usage": "https://docs.amplify.aws/cli/usage/headless",
+			"/docs/cli-toolchain/graphql": "https://docs.amplify.aws/cli/graphql-transformer/overview",
+			"/docs/cli-toolchain/plugins": "https://docs.amplify.aws/cli/usage/plugin",
+			"/docs/cli/init": "https://docs.amplify.aws/cli",
+			"/docs/js/analytics": "https://docs.amplify.aws/lib/analytics/getting-started?platform=js",
+			"/docs/js/api": "https://docs.amplify.aws/lib/graphqlapi/getting-started?platform=js",
+			"/docs/js/xr": "https://docs.amplify.aws/lib/xr/getting-started?platform=js",
+			"/docs/js/authentication": "https://docs.amplify.aws/lib/auth/getting-started?platform=js",
+			"/docs/js/datastore": "https://docs.amplify.aws/lib/datastore/getting-started?platform=js",
+			"/docs/js/interactions": "https://docs.amplify.aws/lib/interactions/getting-started?platform=js",
+			"/docs/js/predictions": "https://docs.amplify.aws/lib/predictions/getting-started?platform=js",
+			"/docs/js/pubsub": "https://docs.amplify.aws/lib/pubsub/getting-started?platform=js",
+			"/docs/js/push-notifications": "https://docs.amplify.aws/lib/push-notifications/getting-started?platform=js",
+			"/docs/js/storage": "https://docs.amplify.aws/lib/storage/getting-started?platform=js",
+			"/docs/js/cache": "https://docs.amplify.aws/lib/utilities/cache?platform=js",
+			"/docs/js/hub": "https://docs.amplify.aws/lib/utilities/hub?platform=js",
+			"/docs/js/i18n": "https://docs.amplify.aws/lib/utilities/i18n?platform=js",
+			"/docs/js/logger": "https://docs.amplify.aws/lib/utilities/logger?platform=js",
+			"/docs/js/service-workers": "https://docs.amplify.aws/lib/utilities/serviceworker?platform=js",
+			"/docs/sdk/ios/start": "https://docs.amplify.aws/start?integration=ios",
+			"/docs/sdk/ios/api": "https://docs.amplify.aws/sdk/api/graphql?platform=ios",
+			"/docs/sdk/ios/authentication": "https://docs.amplify.aws/sdk/auth/how-it-works?platform=ios",
+			"/docs/sdk/ios/pubsub": "https://docs.amplify.aws/sdk/pubsub/getting-started?platform=ios",
+			"/docs/sdk/ios/push-notifications": "https://docs.amplify.aws/sdk/push-notifications/getting-started?platform=ios",
+			"/docs/sdk/ios/storage": "https://docs.amplify.aws/sdk/storage/getting-started?platform=ios",
+			"/docs/ios/start": "https://docs.amplify.aws/start?integration=ios",
+			"/docs/ios/api": "https://docs.amplify.aws/lib/graphqlapi/getting-started?platform=ios",
+			"/docs/ios/storage": "https://docs.amplify.aws/lib/storage/getting-started?platform=ios",
+			"/docs/ios/authentication": "https://docs.amplify.aws/lib/auth/getting-started?platform=ios",
+			"/docs/ios/analytics": "https://docs.amplify.aws/lib/analytics/getting-started?platform=ios",
+			"/docs/ios/datastore": "https://docs.amplify.aws/lib/datastore/getting-started?platform=ios",
+			"/docs/ios/predictions": "https://docs.amplify.aws/lib/predictions/getting-started?platform=ios",
+			"/docs/sdk/android/start": "https://docs.amplify.aws/start?integration=android",
+			"/docs/sdk/android/api": "https://docs.amplify.aws/sdk/api/graphql?platform=android",
+			"/docs/sdk/android/storage": "https://docs.amplify.aws/sdk/storage/getting-started?platform=android",
+			"/docs/sdk/android/authentication": "https://docs.amplify.aws/sdk/auth/how-it-works?platform=android",
+			"/docs/sdk/android/analytics": "https://docs.amplify.aws/sdk/analytics/getting-started?platform=android",
+			"/docs/sdk/android/push-notifications": "https://docs.amplify.aws/sdk/push-notifications/getting-started?platform=android",
+			"/docs/sdk/android/pubsub": "https://docs.amplify.aws/sdk/pubsub/getting-started?platform=android",
+		};
+
+		var pathname = location.pathname;
+		var hash = location.hash;
+		var completePath = pathname + hash;
+
+		var redirectTo = redirectsDictionary[completePath];
+		if (redirectTo) {
+			location.replace(redirectTo);
+		}
+	})()
 
 	var HISTORY_SUPPORT = !!(history && history.pushState);
   
