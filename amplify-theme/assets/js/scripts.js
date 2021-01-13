@@ -2,7 +2,7 @@
 	'use strict';
 
 (function(document, history, location) {
-
+	
 	var HISTORY_SUPPORT = !!(history && history.pushState);
   
 	var anchorScrolls = {
