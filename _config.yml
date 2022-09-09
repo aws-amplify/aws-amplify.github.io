@@ -105,7 +105,7 @@ sass:
 # Jekyll settings
 layouts_dir: ./amplify-theme/_layouts
 includes_dir: ./amplify-theme/_includes
-exclude: [ 'README.md', 'CHANGELOG.md' ]
+exclude: [ 'README.md', 'CHANGELOG.md', 'vendor' ]
 permalink: /:title
 
 category_list:
